@@ -55,11 +55,17 @@
     .nav a{text-decoration:none; color:var(--muted); font-size:14px; padding:8px 10px; border-radius:10px}
     .nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
     .nav-right{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end}
+
     .card{background:rgba(16,19,26,.86); border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow: 0 20px 60px rgba(0,0,0,.25);}
     .hero{padding:30px 0 10px; display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:stretch;}
     @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
-    .hero h1{margin:0 0 10px; font-size:42px; line-height:1.05; letter-spacing:.4px}
-    @media (max-width: 520px){ .hero h1{font-size:34px} }
+
+    /* --- H1 multi-lignes (tes spans) --- */
+    .hero-title{margin:0 0 10px; line-height:1.05; letter-spacing:.4px}
+    .hero-name{display:block; font-size:clamp(34px, 5vw, 48px); letter-spacing:.7px}
+    .hero-genre{display:block; margin-top:6px; font-size:clamp(16px, 2.2vw, 22px); color:var(--muted); font-weight:800}
+    .hero-tag{display:block; margin-top:10px; font-size:clamp(14px, 2vw, 18px); font-weight:800}
+
     .tagline{color:var(--muted); margin:0 0 14px; max-width:62ch}
     .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
     .btn{display:inline-flex; align-items:center; gap:8px; border-radius:12px; padding:10px 12px; border:1px solid var(--line);
@@ -67,6 +73,12 @@
     .btn:hover{background:rgba(255,255,255,.08)}
     .btn.primary{background:linear-gradient(135deg, rgba(229,57,53,.95), rgba(124,77,255,.65)); border-color:rgba(255,255,255,.18);}
     .btn.primary:hover{filter:brightness(1.05)}
+
+    /* --- Boutons streamers (icônes) --- */
+    .btn.streamer{padding:10px 12px}
+    .btn.streamer svg{width:18px; height:18px; display:block}
+    .btn.streamer .label{display:inline-block}
+
     .badges{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0}
     .badge{font-size:12px; color:var(--muted); border:1px solid var(--line); background:rgba(255,255,255,.04); padding:6px 10px; border-radius:999px;}
     .quote{margin:12px 0 0; padding:12px 14px; border-left:3px solid var(--accent); background:rgba(255,255,255,.03); border-radius:12px;}
@@ -128,11 +140,12 @@
 
   <section class="hero" aria-label="Présentation">
     <div class="card">
-<h1 class="hero-title">
-  <span class="hero-name">SILENT INJURY</span>
-  <span class="hero-genre">Metalcore</span>
-  <span class="hero-tag">Frontal. Mélodique. Indiscutable en live.</span>
-</h1>
+      <h1 class="hero-title">
+        <span class="hero-name">SILENT INJURY</span>
+        <span class="hero-genre">Metalcore</span>
+        <span class="hero-tag">Frontal. Mélodique. Indiscutable en live.</span>
+      </h1>
+
       <p class="tagline">
         Silent Injury : metalcore inspiré des années 2000 (Trivium en tête), riffs acérés,
         alternance hurlements / mélodies, énergie scénique — Bombes dehors, paradis factice dedans : ça fissure de partout...
@@ -168,13 +181,11 @@
       <h2>Bio</h2>
       <p>
         Depuis 2021, Silent Injury porte un metalcore frontal : un socle rythmique brutal,
-        une lead qui découpe, une basse qui gonfle l’air, et une voix qui alterne entre cri 
+        une lead qui découpe, une basse qui gonfle l’air, et une voix qui alterne entre cri
         et chant. Le groupe défend un répertoire calibré pour la scène,
         avec un son actuel et une exécution au scalpel.
       </p>
-      <p class="muted">
-      
-      </p>
+      <p class="muted"></p>
     </div>
 
     <div class="card">
@@ -208,10 +219,43 @@
             <li>Prod / mix / master : Charles Rousseau</li>
             <li>Lyrics : Thibault Vermot + Arthur Delorme</li>
           </ul>
+
+          <!-- Streaming : Bandcamp + plateformes -->
           <div class="cta" style="margin-top:12px">
             <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Écouter sur Bandcamp</a>
-            <a class="btn" href="[LIEN_STREAMING]" target="_blank" rel="noopener">🎧 Spotify/Deezer/Apple</a>
+
+            <a class="btn streamer" href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Spotify">
+              <!-- Spotify icon (simplifié) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M7.5 10.2c3.6-1.2 7.4-.9 10.7.7"></path>
+                <path d="M8.2 13c3-1 6.3-.8 9 .6"></path>
+                <path d="M9 15.7c2.2-.7 4.7-.6 6.7.4"></path>
+              </svg>
+              <span class="label">Spotify</span>
+            </a>
+
+            <a class="btn streamer" href="https://www.deezer.com/fr/album/692870631" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Deezer">
+              <!-- Deezer icon (barres) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <rect x="3" y="12" width="2" height="8" rx="1"></rect>
+                <rect x="7" y="10" width="2" height="10" rx="1"></rect>
+                <rect x="11" y="8" width="2" height="12" rx="1"></rect>
+                <rect x="15" y="10" width="2" height="10" rx="1"></rect>
+                <rect x="19" y="12" width="2" height="8" rx="1"></rect>
+              </svg>
+              <span class="label">Deezer</span>
+            </a>
+
+            <a class="btn streamer" href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Apple Music">
+              <!-- Apple Music icon (note) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M16 3v11.2a3.2 3.2 0 1 1-2-3V6.2l-6 1.4V17.2a3.2 3.2 0 1 1-2-3V5.8L16 3z"></path>
+              </svg>
+              <span class="label">Apple Music</span>
+            </a>
           </div>
+
         </div>
       </div>
     </div>
@@ -333,7 +377,12 @@
         <li>Press book : <span class="mono">assets/presskit.pdf</span></li>
         <li>Clip : <span class="mono">https://www.bing.com/videos/riverview/relatedvideo?q=youtube+music+silent+injury+break+the+mirror&mid=19AEFC7D0B64B2713EF219AEFC7D0B64B2713EF2&FORM=VIRE</span></li>
         <li>Bandcamp : <span class="mono">https://silentinjury.bandcamp.com/album/silent-injury</span></li>
-        <li>Streaming : <span class="mono">[LIEN_STREAMING]</span></li>
+        <li>
+          Streaming :
+          <a href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener">Spotify</a>
+          • <a href="https://www.deezer.com/fr/album/692870631" target="_blank" rel="noopener">Deezer</a>
+          • <a href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener">Apple Music</a>
+        </li>
         <li>Live video : <span class="mono">[LIEN_LIVE_VIDEO ou N/A]</span></li>
         <li>Tech rider : <span class="mono">[LIEN_TECH_RIDER]</span></li>
       </ul>
