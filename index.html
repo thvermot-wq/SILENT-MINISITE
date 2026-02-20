@@ -11,7 +11,7 @@
   <meta property="og:description" content="EPK / Booking : press book, clip, streaming, live, tech, contact. Set 40–90 min. Asso La Pelle A Breakdown. SACEM." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-cover.jpg" />
-  <meta property="og:url" content="[URL_DU_SITE]" />
+  <meta property="og:url" content="https://thvermot-wq.github.io/SILENT-MINISITE/" />
 
   <link rel="icon" href="assets/logo.png" />
 
@@ -46,7 +46,15 @@
       background:rgba(11,12,16,.72);
       border-bottom:1px solid var(--line);
     }
-    .nav{max-width:var(--max); margin:0 auto; padding:12px 18px; display:flex; align-items:center; gap:14px; justify-content:space-between;}
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      justify-content:space-between;
+    }
     .brand{display:flex; align-items:center; gap:12px; letter-spacing:.6px; min-width: 190px;}
     .brand img{height:30px; width:auto; display:block; filter: drop-shadow(0 10px 30px rgba(0,0,0,.35));}
     .brand .meta{display:flex; flex-direction:column; gap:2px}
@@ -54,7 +62,14 @@
     .brand span{color:var(--muted); font-size:12px}
     .nav a{text-decoration:none; color:var(--muted); font-size:14px; padding:8px 10px; border-radius:10px}
     .nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-    .nav-right{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; align-items:center}
+
+    .nav-right{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
 
     /* --- Language switch (FR / EN) --- */
     .main-nav{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
@@ -127,8 +142,6 @@
     .muted{color:var(--muted)}
     .section{margin-top:22px}
     .list{margin:0; padding-left:18px}
-    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
-    @media (max-width: 700px){ .two-col{grid-template-columns:1fr} }
     .cover{display:flex; gap:14px; align-items:flex-start;}
     .cover img{width:140px; height:140px; border-radius:16px; border:1px solid var(--line); object-fit:cover;}
     @media (max-width: 520px){ .cover{flex-direction:column} .cover img{width:100%; height:auto; aspect-ratio:1/1} }
