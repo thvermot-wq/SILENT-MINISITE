@@ -60,13 +60,14 @@
     .hero{padding:30px 0 10px; display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:stretch;}
     @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
 
-    /* --- H1 multi-lignes (tes spans) --- */
+    /* --- H1 multi-lignes --- */
     .hero-title{margin:0 0 10px; line-height:1.05; letter-spacing:.4px}
     .hero-name{display:block; font-size:clamp(34px, 5vw, 48px); letter-spacing:.7px}
     .hero-genre{display:block; margin-top:6px; font-size:clamp(16px, 2.2vw, 22px); color:var(--muted); font-weight:800}
     .hero-tag{display:block; margin-top:10px; font-size:clamp(14px, 2vw, 18px); font-weight:800}
 
     .tagline{color:var(--muted); margin:0 0 14px; max-width:62ch}
+
     .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
     .btn{display:inline-flex; align-items:center; gap:8px; border-radius:12px; padding:10px 12px; border:1px solid var(--line);
       background:rgba(255,255,255,.04); color:var(--text); text-decoration:none; font-weight:700; font-size:14px;}
@@ -74,9 +75,8 @@
     .btn.primary{background:linear-gradient(135deg, rgba(229,57,53,.95), rgba(124,77,255,.65)); border-color:rgba(255,255,255,.18);}
     .btn.primary:hover{filter:brightness(1.05)}
 
-    /* --- Boutons streamers (icônes) --- */
-    .btn.streamer{padding:10px 12px}
-    .btn.streamer svg{width:18px; height:18px; display:block}
+    /* --- Boutons streamers (icônes inline SVG) --- */
+    .btn.streamer svg{width:18px;height:18px;display:block}
     .btn.streamer .label{display:inline-block}
 
     .badges{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0}
@@ -87,6 +87,7 @@
     .hero-media img{display:block; width:100%; height:100%; object-fit:cover; aspect-ratio: 4 / 3;}
     .hero-media .cap{position:absolute; left:12px; bottom:12px; display:flex; gap:8px; align-items:center; background:rgba(0,0,0,.45);
       border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:6px 10px; color:rgba(255,255,255,.92); font-size:12px; backdrop-filter: blur(8px);}
+
     .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px;}
     @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
     h2{margin:0 0 10px; font-size:18px; letter-spacing:.3px;}
@@ -99,16 +100,29 @@
     .cover{display:flex; gap:14px; align-items:flex-start;}
     .cover img{width:140px; height:140px; border-radius:16px; border:1px solid var(--line); object-fit:cover;}
     @media (max-width: 520px){ .cover{flex-direction:column} .cover img{width:100%; height:auto; aspect-ratio:1/1} }
+
     .dates{display:flex; flex-direction:column; gap:8px;}
     .date{display:flex; justify-content:space-between; gap:10px; padding:10px 12px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.03);}
     .date b{font-size:13px}
     .date span{color:var(--muted); font-size:13px}
     .pill{display:inline-flex; align-items:center; padding:4px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.04); color:var(--muted); font-size:12px; white-space:nowrap;}
+
     .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;}
     @media (max-width: 900px){ .gallery{grid-template-columns:repeat(2, 1fr)} }
     @media (max-width: 520px){ .gallery{grid-template-columns:1fr} }
     .ph{display:block; border-radius:16px; overflow:hidden; border:1px solid var(--line); background:rgba(255,255,255,.03);}
     .ph img{display:block; width:100%; height:auto;}
+
+    .video{
+      aspect-ratio:16/9;
+      width:100%;
+      border-radius:16px;
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:rgba(255,255,255,.03);
+    }
+    .video iframe{width:100%; height:100%; border:0}
+
     footer{margin-top:26px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between; align-items:center;}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
   </style>
@@ -147,13 +161,13 @@
       </h1>
 
       <p class="tagline">
-        Silent Injury : metalcore inspiré des années 2000 (Trivium en tête), riffs acérés,
-        alternance hurlements / mélodies, énergie scénique — Bombes dehors, paradis factice dedans : ça fissure de partout...
+        Metalcore 2000s : riffs acérés, alternance scream/clean, set taillé pour la scène.
       </p>
 
       <div class="cta">
         <a class="btn primary" href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book (PDF)</a>
-        <a class="btn" href="https://www.bing.com/videos/riverview/relatedvideo?q=youtube+music+silent+injury+break+the+mirror&mid=19AEFC7D0B64B2713EF219AEFC7D0B64B2713EF2&FORM=VIRE" target="_blank" rel="noopener">▶️ Clip “Break The Mirror”</a>
+        <a class="btn" href="mailto:silentinjuryofficiel@gmail.com?subject=Contacter%20Silent" target="_blank" rel="noopener">✉️ Booking / Contact</a>
+        <a class="btn" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">▶️ Clip “Break The Mirror”</a>
         <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp (album)</a>
       </div>
 
@@ -165,7 +179,7 @@
       </div>
 
       <div class="quote">
-        « Très influencé Machine Head... mais du bon Machine Head ! »
+        « C’est très influencé Machine Head, mais c’est du bon Machine Head. »
         <small>Metal Décadence (Ouest Track), jan. 2025</small>
       </div>
     </div>
@@ -185,7 +199,9 @@
         et chant. Le groupe défend un répertoire calibré pour la scène,
         avec un son actuel et une exécution au scalpel.
       </p>
-      <p class="muted"></p>
+      <p class="muted">
+        Bombes dehors, paradis factice dedans : ça fissure de partout.
+      </p>
     </div>
 
     <div class="card">
@@ -193,13 +209,13 @@
       <ul class="list">
         <li><b>Album</b> : <span class="mono">Silent Injury</span> — sortie le 10/01/2025</li>
         <li><b>Clip</b> : <span class="mono">Break The Mirror</span> (Official Music Video)</li>
-        <li><b>Radio</b> : Ouest Track / Metal Décadence (jan. 2025) ; Radio Nova (mai 2025)</li>
+        <li><b>Radio</b> : Ouest Track / Metal Décadence (jan. 2025) ; diffusion nationale mentionnée dans le press book (Radio Nova)</li>
         <li><b>Studio</b> : second opus en cours</li>
       </ul>
       <div class="section">
         <h2>Line-up</h2>
         <ul class="list">
-          <li>Arthur Delorme — rythm guitar, voice</li>
+          <li>Arthur Delorme — rhythm guitar, voice</li>
           <li>Thibault Vermot — bass</li>
           <li>Charles Rousseau — lead guitar</li>
           <li>Vincent Louvel — drums</li>
@@ -220,12 +236,10 @@
             <li>Lyrics : Thibault Vermot + Arthur Delorme</li>
           </ul>
 
-          <!-- Streaming : Bandcamp + plateformes -->
           <div class="cta" style="margin-top:12px">
-            <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Écouter sur Bandcamp</a>
+            <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp</a>
 
             <a class="btn streamer" href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Spotify">
-              <!-- Spotify icon (simplifié) -->
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M7.5 10.2c3.6-1.2 7.4-.9 10.7.7"></path>
@@ -236,7 +250,6 @@
             </a>
 
             <a class="btn streamer" href="https://www.deezer.com/fr/album/692870631" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Deezer">
-              <!-- Deezer icon (barres) -->
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
                 <rect x="3" y="12" width="2" height="8" rx="1"></rect>
                 <rect x="7" y="10" width="2" height="10" rx="1"></rect>
@@ -248,7 +261,6 @@
             </a>
 
             <a class="btn streamer" href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Apple Music">
-              <!-- Apple Music icon (note) -->
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
                 <path d="M16 3v11.2a3.2 3.2 0 1 1-2-3V6.2l-6 1.4V17.2a3.2 3.2 0 1 1-2-3V5.8L16 3z"></path>
               </svg>
@@ -262,10 +274,18 @@
 
     <div class="card" id="video">
       <h2>Clip — Break The Mirror</h2>
-      <p class="muted"></p>
-      <div class="cta" style="margin-top:10px">
-        <a class="btn primary" href="https://www.bing.com/videos/riverview/relatedvideo?q=youtube+music+silent+injury+break+the+mirror&mid=19AEFC7D0B64B2713EF219AEFC7D0B64B2713EF2&FORM=VIRE" target="_blank" rel="noopener">▶️ Ouvrir le clip</a>
-        <a class="btn" href="[LIEN_YOUTUBE]" target="_blank" rel="noopener">Chaîne YouTube</a>
+
+      <div class="video" aria-label="Lecteur vidéo YouTube (Break The Mirror)" style="margin-top:10px">
+        <iframe
+          src="https://www.youtube.com/embed/wf1ajH-h7EQ"
+          title="Silent Injury — Break The Mirror (Official Music Video)"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="cta" style="margin-top:12px">
+        <a class="btn primary" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">▶️ Ouvrir sur YouTube</a>
       </div>
     </div>
   </section>
@@ -306,7 +326,7 @@
     <div class="card" id="press">
       <h2>Presse / radio</h2>
       <div class="quote">
-        « Très influencé Machine Head... Mais du bon Machine Head ! »
+        « C’est très influencé Machine Head, mais c’est du bon Machine Head. »
         <small>Metal Décadence (Ouest Track), jan. 2025</small>
       </div>
       <div class="cta" style="margin-top:12px">
@@ -326,7 +346,7 @@
       </ul>
       <p class="muted" style="margin-top:10px">Patch minimal (indicatif) : Kick / Snare / OH L-R + Bass DI + 2× GTR DI + 2 voix.</p>
       <div class="cta" style="margin-top:12px">
-        <a class="btn" href="[LIEN_TECH_RIDER]" target="_blank" rel="noopener">🎚️ Tech rider (PDF)</a>
+        <a class="btn" href="assets/techrider.pdf" target="_blank" rel="noopener">🎚️ Tech rider (PDF)</a>
       </div>
     </div>
 
@@ -335,26 +355,23 @@
       <p class="muted">Cliquez pour ouvrir en grand (utile pour affiches / com').</p>
       <div class="gallery" aria-label="Galerie photos">
         <a class="ph" href="assets/gallery/band-photo-credits.jpg" target="_blank" rel="noopener">
-          <img src="assets/gallery/thumbs/band-photo-credits.jpg" alt="Silent Injury — photo band photo credits" loading="lazy" />
+          <img src="assets/gallery/thumbs/band-photo-credits.jpg" alt="Silent Injury — photo band" loading="lazy" />
         </a>
         <a class="ph" href="assets/gallery/album-cover.jpg" target="_blank" rel="noopener">
-          <img src="assets/gallery/thumbs/album-cover.jpg" alt="Silent Injury — photo album cover" loading="lazy" />
+          <img src="assets/gallery/thumbs/album-cover.jpg" alt="Silent Injury — photo cover" loading="lazy" />
         </a>
         <a class="ph" href="assets/gallery/drummer.jpg" target="_blank" rel="noopener">
           <img src="assets/gallery/thumbs/drummer.jpg" alt="Silent Injury — photo drummer" loading="lazy" />
         </a>
         <a class="ph" href="assets/gallery/guitarist-bw.jpg" target="_blank" rel="noopener">
-          <img src="assets/gallery/thumbs/guitarist-bw.jpg" alt="Silent Injury — photo guitarist bw" loading="lazy" />
+          <img src="assets/gallery/thumbs/guitarist-bw.jpg" alt="Silent Injury — photo guitarist" loading="lazy" />
         </a>
         <a class="ph" href="assets/gallery/bassist-color.jpg" target="_blank" rel="noopener">
-          <img src="assets/gallery/thumbs/bassist-color.jpg" alt="Silent Injury — photo bassist color" loading="lazy" />
+          <img src="assets/gallery/thumbs/bassist-color.jpg" alt="Silent Injury — photo bassist" loading="lazy" />
         </a>
         <a class="ph" href="assets/gallery/bassist-bw.jpg" target="_blank" rel="noopener">
           <img src="assets/gallery/thumbs/bassist-bw.jpg" alt="Silent Injury — photo bassist bw" loading="lazy" />
         </a>
-      </div>
-      <div class="cta" style="margin-top:12px">
-        <a class="btn" href="[LIEN_DOSSIER_PHOTOS_HD]" target="_blank" rel="noopener">📷 Dossier photos HD</a>
       </div>
     </div>
   </section>
@@ -365,8 +382,18 @@
       <p><b>Email</b> : <a href="mailto:silentinjuryofficiel@gmail.com">silentinjuryofficiel@gmail.com</a></p>
       <p class="muted">Téléphone (booking/manager) : <span class="mono">[À RENSEIGNER]</span></p>
       <p class="muted">Ville / base : <span class="mono">[À RENSEIGNER]</span></p>
+
+      <div class="section">
+        <h2>Downloads</h2>
+        <ul class="list">
+          <li><a href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book (PDF)</a></li>
+          <li><a href="assets/techrider.pdf" target="_blank" rel="noopener">🎚️ Tech rider (PDF)</a></li>
+          <li>📷 Photos HD : sur demande</li>
+        </ul>
+      </div>
+
       <div class="cta" style="margin-top:12px">
-        <a class="btn primary" href="mailto:silentinjuryofficiel@gmail.com?subject=Booking%20Silent%20Injury%20—%20[NOM]%20—%20[DATE]">✉️ Écrire (objet pré-rempli)</a>
+        <a class="btn primary" href="mailto:silentinjuryofficiel@gmail.com?subject=Contacter%20Silent">✉️ Contacter</a>
         <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp</a>
       </div>
     </div>
@@ -374,17 +401,16 @@
     <div class="card">
       <h2>Checklist (pour prog)</h2>
       <ul class="list">
-        <li>Press book : <span class="mono">assets/presskit.pdf</span></li>
-        <li>Clip : <span class="mono">https://www.bing.com/videos/riverview/relatedvideo?q=youtube+music+silent+injury+break+the+mirror&mid=19AEFC7D0B64B2713EF219AEFC7D0B64B2713EF2&FORM=VIRE</span></li>
-        <li>Bandcamp : <span class="mono">https://silentinjury.bandcamp.com/album/silent-injury</span></li>
+        <li>Press book : <a href="assets/presskit.pdf" target="_blank" rel="noopener">assets/presskit.pdf</a></li>
+        <li>Clip : <a href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">YouTube</a></li>
+        <li>Bandcamp : <a href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">silentinjury.bandcamp.com</a></li>
         <li>
           Streaming :
           <a href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener">Spotify</a>
           • <a href="https://www.deezer.com/fr/album/692870631" target="_blank" rel="noopener">Deezer</a>
           • <a href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener">Apple Music</a>
         </li>
-        <li>Live video : <span class="mono">[LIEN_LIVE_VIDEO ou N/A]</span></li>
-        <li>Tech rider : <span class="mono">[LIEN_TECH_RIDER]</span></li>
+        <li>Tech rider : <a href="assets/techrider.pdf" target="_blank" rel="noopener">assets/techrider.pdf</a></li>
       </ul>
       <p class="muted" style="margin-top:10px">
         Mentions : Asso La Pelle A Breakdown • Groupe enregistré SACEM • Set 40–90 min.
