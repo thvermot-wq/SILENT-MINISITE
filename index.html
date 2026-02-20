@@ -54,7 +54,39 @@
     .brand span{color:var(--muted); font-size:12px}
     .nav a{text-decoration:none; color:var(--muted); font-size:14px; padding:8px 10px; border-radius:10px}
     .nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-    .nav-right{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end}
+    .nav-right{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; align-items:center}
+
+    /* --- Language switch (FR / EN) --- */
+    .main-nav{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
+    .lang-switch{
+      display:flex;
+      gap:6px;
+      align-items:center;
+      margin-left:6px;
+    }
+    .lang-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:800;
+      font-size:13px;
+      text-decoration:none;
+    }
+    .lang-btn:hover{background:rgba(255,255,255,.08)}
+    .lang-btn.is-active{
+      background:rgba(255,255,255,.10);
+      border-color:rgba(255,255,255,.22);
+    }
+    .lang-btn.is-disabled{
+      opacity:.55;
+      cursor:not-allowed;
+    }
+    .lang-btn.is-disabled:hover{background:rgba(255,255,255,.04)}
 
     .card{background:rgba(16,19,26,.86); border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow: 0 20px 60px rgba(0,0,0,.25);}
     .hero{padding:30px 0 10px; display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:stretch;}
@@ -137,16 +169,25 @@
         <span>EPK / Booking</span>
       </div>
     </div>
-    <nav class="nav-right" aria-label="Navigation">
-      <a href="#bio">Bio</a>
-      <a href="#release">Release</a>
-      <a href="#video">Clip</a>
-      <a href="#live">Live</a>
-      <a href="#press">Presse</a>
-      <a href="#tech">Tech</a>
-      <a href="#photos">Photos</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+    <div class="nav-right">
+      <nav class="main-nav" aria-label="Navigation">
+        <a href="#bio">Bio</a>
+        <a href="#release">Release</a>
+        <a href="#video">Clip</a>
+        <a href="#live">Live</a>
+        <a href="#press">Presse</a>
+        <a href="#tech">Tech</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="lang-switch" aria-label="Langue">
+        <a class="lang-btn is-active" href="./" aria-current="page" title="Français">🇫🇷 FR</a>
+        <!-- Quand la page EN existera : remplace href="#" par href="en/" et supprime is-disabled + aria-disabled + tabindex -->
+        <a class="lang-btn is-disabled" href="#" aria-disabled="true" tabindex="-1" title="English page bientôt">🇬🇧 EN</a>
+      </div>
+    </div>
   </div>
 </header>
 
