@@ -102,25 +102,35 @@
       background:rgba(255,255,255,.10);
       border-color:rgba(255,255,255,.22);
     }
-    .lang-btn.is-disabled{
-      opacity:.55;
-      cursor:not-allowed;
-    }
+    .lang-btn.is-disabled{opacity:.55; cursor:not-allowed;}
     .lang-btn.is-disabled:hover{background:rgba(255,255,255,.04)}
 
-    /* --- Mini audio player --- */
+    /* --- Mini audio player (Hero) --- */
+    .player-wrap{margin-top:12px}
+    .player-label{
+      display:flex;
+      gap:10px;
+      align-items:baseline;
+      flex-wrap:wrap;
+      margin:0 0 8px;
+    }
+    .player-label b{letter-spacing:.2px}
+    .player-label span{color:var(--muted); font-size:13px}
+
     .player{
       display:flex;
       align-items:center;
       gap:8px;
-      padding:6px 8px;
+      padding:8px 10px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       border-radius:12px;
+      width:fit-content;
+      max-width:100%;
     }
     .player-btn{
       width:36px;
-      height:30px;
+      height:32px;
       border-radius:10px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
@@ -131,7 +141,7 @@
     }
     .player-btn:hover{background:rgba(255,255,255,.08)}
     .player-bar{
-      width:140px;
+      width:220px;
       height:10px;
       border-radius:999px;
       border:1px solid var(--line);
@@ -151,10 +161,10 @@
       font-variant-numeric: tabular-nums;
     }
     @media (max-width: 520px){
-      .player-bar{width:110px}
+      .player-bar{width:150px}
     }
 
-    .card{background:rgba(16,19,26,.86); border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow: 0 20px 60px rgba(0,0,0,.25);}
+    .card{background:rgba(16,19,26,.86); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow: 0 20px 60px rgba(0,0,0,.25);}
     .hero{padding:30px 0 10px; display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:stretch;}
     @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
 
@@ -264,15 +274,6 @@
           <span class="flag" aria-hidden="true">🇬🇧</span>
         </a>
       </div>
-
-      <!-- Mini player (Silent Injury) -->
-      <div class="player" aria-label="Lecteur audio Silent Injury">
-        <button class="player-btn" id="player-toggle" type="button" aria-pressed="false" title="Lire / pause">▶️</button>
-        <div class="player-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" title="Avancer / reculer">
-          <div class="player-fill" id="player-fill"></div>
-        </div>
-        <div class="player-time" id="player-time">0:00</div>
-      </div>
     </div>
   </div>
 </header>
@@ -290,6 +291,20 @@
       <p class="tagline">
         Metalcore 2000s : riffs acérés, alternance scream/clean, set taillé pour la scène.
       </p>
+
+      <div class="player-wrap" aria-label="Title track player">
+        <p class="player-label">
+          <b>Title track</b>
+          <span>Silent Injury</span>
+        </p>
+        <div class="player" aria-label="Lecteur audio Silent Injury">
+          <button class="player-btn" id="player-toggle" type="button" aria-pressed="false" title="Lire / pause">▶️</button>
+          <div class="player-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" title="Avancer / reculer">
+            <div class="player-fill" id="player-fill"></div>
+          </div>
+          <div class="player-time" id="player-time">0:00</div>
+        </div>
+      </div>
 
       <div class="cta">
         <a class="btn primary" href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book (PDF)</a>
@@ -421,7 +436,6 @@
   <section id="visualizer" class="grid">
     <div class="card">
       <h2>Visualizer — Parallel Heights</h2>
-      <p class="muted">Lecture locale (fichier dans le dossier assets).</p>
 
       <div class="video" aria-label="Visualizer Parallel Heights" style="margin-top:10px">
         <video controls playsinline preload="metadata">
@@ -433,9 +447,8 @@
     </div>
 
     <div class="card">
-      <h2>Audio</h2>
-      <p class="muted">Silent Injury — lecteur en haut (▶️).</p>
-      <p>Si tu veux, on peut aussi déplacer le player dans le hero.</p>
+      <h2>Paroles / ambiance</h2>
+      <p class="muted">Si besoin : un court texte ici (1–2 lignes) sur l’intention du morceau.</p>
     </div>
   </section>
 
@@ -560,8 +573,8 @@
           • <a href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener">Apple Music</a>
         </li>
         <li>Tech rider : <a href="assets/techrider.pdf" target="_blank" rel="noopener">assets/techrider.pdf</a></li>
-        <li>Audio player : <span class="mono">assets/silentinjury.mp3</span></li>
-        <li>Visualizer : <span class="mono">assets/PARALLEL720.mp4</span></li>
+        <li>Title track (audio) : <span class="mono">assets/silentinjury.mp3</span></li>
+        <li>Visualizer (video) : <span class="mono">assets/PARALLEL720.mp4</span></li>
       </ul>
       <p class="muted" style="margin-top:10px">
         Mentions : Asso La Pelle A Breakdown • Groupe enregistré SACEM • Set 40–90 min.
