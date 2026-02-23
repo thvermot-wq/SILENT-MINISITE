@@ -351,6 +351,61 @@ img,svg,video{max-width:100%; height:auto}
   height:100%;
   object-fit:cover;
 }
+
+/* --- Galerie défilante compacte (mobile-friendly) --- */
+.gallery-strip-wrap{
+  display:grid;
+  grid-template-columns: 36px 1fr 36px;
+  gap:10px;
+  align-items:center;
+}
+
+.strip-nav{
+  width:36px; height:36px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  cursor:pointer;
+  font-size:22px;
+  line-height:1;
+}
+.strip-nav:hover{ background:rgba(255,255,255,.08); }
+
+.gallery-strip{
+  display:flex;
+  gap:10px;
+  overflow:auto;
+  scroll-snap-type:x mandatory;
+  padding:6px 2px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.02);
+  -webkit-overflow-scrolling: touch; /* inertie iOS */
+  scroll-behavior: smooth;
+}
+.gallery-strip::-webkit-scrollbar{ height:10px; }
+.gallery-strip::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.12); border-radius:999px; }
+
+/* la carte thumb reste carrée ; ici on fixe sa taille */
+.gallery-strip .ph{
+  flex: 0 0 112px;
+  aspect-ratio: 1 / 1;
+  scroll-snap-align:start;
+  -webkit-tap-highlight-color: transparent;
+}
+.gallery-strip .ph img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+@media (max-width:520px){
+  .gallery-strip-wrap{ grid-template-columns: 30px 1fr 30px; }
+  .gallery-strip .ph{ flex-basis: 96px; }
+  .strip-nav{ width:30px; height:30px; border-radius:10px; font-size:20px; }
+}
+
 /* Galerie — bonus pro */
 .gallery-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 .chip{border:1px solid var(--stroke);background:rgba(255,255,255,.03);color:var(--text);padding:6px 10px;border-radius:999px;font-size:.85rem;cursor:pointer}
@@ -514,7 +569,7 @@ img,svg,video{max-width:100%; height:auto}
           <li>Arthur Delorme — rhythm guitar, voice</li>
           <li>Thibault Vermot — bass</li>
           <li>Charles Rousseau — lead guitar</li>
-          <li>XXXXX — drums</li>
+          <li>Vincent Louvel — drums</li>
         </ul>
       </div>
     </div>
@@ -688,7 +743,11 @@ img,svg,video{max-width:100%; height:auto}
   <button class="chip" type="button" data-filter="thibault">Thibault</button>
   <button class="chip" type="button" data-filter="band">Groupe</button>
 </div>
-<div class="gallery" id="galleryGrid" aria-label="Galerie photos"></div>
+<div class="gallery-strip-wrap" aria-label="Galerie photos (défilante)">
+        <button class="strip-nav prev" type="button" aria-label="Photos précédentes">‹</button>
+        <div class="gallery-strip" id="galleryStrip" tabindex="0" aria-label="Bande de miniatures (défilement horizontal)"></div>
+        <button class="strip-nav next" type="button" aria-label="Photos suivantes">›</button>
+      </div>
 <noscript>
   <div class="note">Les filtres et l’agrandissement nécessitent JavaScript. Les photos restent accessibles via ces liens :</div>
   <ul class="noscript-links">
@@ -859,7 +918,9 @@ img,svg,video{max-width:100%; height:auto}
 (() => {
   const PHOTOS = [{"file": "01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp", "src": "assets/gallery/01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp", "alt": "Silent Injury en concert — Thibault Vermot, Vincent Louvel (basse, batterie), photo n&b", "caption": "Thibault Vermot, Vincent Louvel — basse / batterie — live (N&B)", "tags": ["thibault", "vincent", "band"]}, {"file": "02-silent-injury-live-thibault-vermot-bassiste-portrait-noir-blanc.webp", "src": "assets/gallery/02-silent-injury-live-thibault-vermot-bassiste-portrait-noir-blanc.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo n&b", "caption": "Thibault Vermot — basse — portrait (N&B)", "tags": ["thibault"]}, {"file": "03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp", "src": "assets/gallery/03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo couleur", "caption": "Charles Rousseau — guitare / solo — live", "tags": ["charles"]}, {"file": "04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp", "src": "assets/gallery/04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare, chant), photo n&b", "caption": "Arthur Delorme — guitare / chant — portrait (N&B)", "tags": ["arthur"]}, {"file": "05-silent-injury-live-groupe-complet-vincent-louvel-batterie-vue-arriere-noir-blanc.webp", "src": "assets/gallery/05-silent-injury-live-groupe-complet-vincent-louvel-batterie-vue-arriere-noir-blanc.webp", "alt": "Silent Injury en concert — Vincent Louvel (batterie), photo n&b", "caption": "Vincent Louvel — batterie — vue arrière (N&B)", "tags": ["vincent", "band"]}, {"file": "06-silent-injury-live-vincent-louvel-batteur-performance-noir-blanc.webp", "src": "assets/gallery/06-silent-injury-live-vincent-louvel-batteur-performance-noir-blanc.webp", "alt": "Silent Injury en concert — Vincent Louvel (batterie), photo n&b", "caption": "Vincent Louvel — batterie — live (N&B)", "tags": ["vincent", "band"]}, {"file": "07-silent-injury-live-arthur-delorme-chant-guitare-lumiere-rouge.webp", "src": "assets/gallery/07-silent-injury-live-arthur-delorme-chant-guitare-lumiere-rouge.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare, chant), photo couleur", "caption": "Arthur Delorme — guitare / chant — live", "tags": ["arthur"]}, {"file": "08-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-plan-large-noir-blanc.webp", "src": "assets/gallery/08-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-plan-large-noir-blanc.webp", "alt": "Silent Injury en concert — Thibault Vermot, Vincent Louvel (basse, batterie), photo n&b", "caption": "Thibault Vermot, Vincent Louvel — basse / batterie — live (N&B)", "tags": ["thibault", "vincent", "band"]}, {"file": "09-silent-injury-live-scene-public-coulisses-noir-blanc.webp", "src": "assets/gallery/09-silent-injury-live-scene-public-coulisses-noir-blanc.webp", "alt": "Silent Injury en concert — Silent Injury, photo n&b", "caption": "Silent Injury — avec le public (N&B)", "tags": ["band"]}, {"file": "10-silent-injury-live-arthur-delorme-chant-cri-profil-lumiere-bleue.webp", "src": "assets/gallery/10-silent-injury-live-arthur-delorme-chant-cri-profil-lumiere-bleue.webp", "alt": "Silent Injury en concert — Arthur Delorme (chant), photo couleur", "caption": "Arthur Delorme — chant — live", "tags": ["arthur"]}, {"file": "11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp", "src": "assets/gallery/11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo couleur", "caption": "Thibault Vermot — basse — live", "tags": ["thibault"]}, {"file": "12-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-ombre.webp", "src": "assets/gallery/12-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-ombre.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo n&b", "caption": "Arthur Delorme — guitare — portrait (N&B)", "tags": ["arthur"]}, {"file": "13-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-yeux-clos.webp", "src": "assets/gallery/13-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-yeux-clos.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo n&b", "caption": "Arthur Delorme — guitare — portrait (N&B)", "tags": ["arthur"]}, {"file": "14-silent-injury-live-charles-rousseau-guitariste-soliste-lumiere-bleue.webp", "src": "assets/gallery/14-silent-injury-live-charles-rousseau-guitariste-soliste-lumiere-bleue.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo couleur", "caption": "Charles Rousseau — guitare / solo — live", "tags": ["charles"]}, {"file": "15-silent-injury-live-arthur-delorme-thibault-vermot-vincent-louvel-groupe-noir-blanc.webp", "src": "assets/gallery/15-silent-injury-live-arthur-delorme-thibault-vermot-vincent-louvel-groupe-noir-blanc.webp", "alt": "Silent Injury en concert — Arthur Delorme, Thibault Vermot, Vincent Louvel, photo n&b", "caption": "Arthur Delorme, Thibault Vermot, Vincent Louvel — live (N&B)", "tags": ["arthur", "thibault", "vincent", "band"]}, {"file": "16-silent-injury-live-charles-rousseau-vincent-louvel-scene-noir-blanc.webp", "src": "assets/gallery/16-silent-injury-live-charles-rousseau-vincent-louvel-scene-noir-blanc.webp", "alt": "Silent Injury en concert — Charles Rousseau, Vincent Louvel, photo n&b", "caption": "Charles Rousseau, Vincent Louvel — live (N&B)", "tags": ["charles", "vincent", "band"]}, {"file": "17-silent-injury-live-thibault-vermot-arthur-delorme-vincent-louvel-noir-blanc.webp", "src": "assets/gallery/17-silent-injury-live-thibault-vermot-arthur-delorme-vincent-louvel-noir-blanc.webp", "alt": "Silent Injury en concert — Arthur Delorme, Thibault Vermot, Vincent Louvel, photo n&b", "caption": "Arthur Delorme, Thibault Vermot, Vincent Louvel — live (N&B)", "tags": ["arthur", "thibault", "vincent", "band"]}, {"file": "18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp", "src": "assets/gallery/18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp", "alt": "Silent Injury en concert — Arthur Delorme, Charles Rousseau (guitare), photo n&b", "caption": "Arthur Delorme, Charles Rousseau — guitare — live (N&B)", "tags": ["arthur", "charles"]}, {"file": "silent-injury-arthur-delorme-chant-charles-rousseau-guitare-live-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-chant-charles-rousseau-guitare-live-noir-blanc-01.webp", "alt": "Silent Injury en concert — Arthur Delorme, Charles Rousseau (guitare, chant), photo n&b", "caption": "Arthur Delorme, Charles Rousseau — guitare / chant — live (N&B)", "tags": ["arthur", "charles"]}, {"file": "silent-injury-arthur-delorme-chant-scene-groupe-live-noir-blanc-02.webp", "src": "assets/gallery/silent-injury-arthur-delorme-chant-scene-groupe-live-noir-blanc-02.webp", "alt": "Silent Injury en concert — Arthur Delorme (chant), photo n&b", "caption": "Arthur Delorme — chant — live (N&B)", "tags": ["arthur", "band"]}, {"file": "silent-injury-arthur-delorme-charles-rousseau-duo-guitares-live-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-charles-rousseau-duo-guitares-live-01.webp", "alt": "Silent Injury en concert — Arthur Delorme, Charles Rousseau (guitare), photo couleur", "caption": "Arthur Delorme, Charles Rousseau — guitare — live", "tags": ["arthur", "charles"]}, {"file": "silent-injury-arthur-delorme-guitare-live-portrait-vertical-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-guitare-live-portrait-vertical-01.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo couleur", "caption": "Arthur Delorme — guitare — portrait", "tags": ["arthur"]}, {"file": "silent-injury-arthur-delorme-guitariste-chanteur-live-concert-couleur-02.webp", "src": "assets/gallery/silent-injury-arthur-delorme-guitariste-chanteur-live-concert-couleur-02.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare, chant), photo couleur", "caption": "Arthur Delorme — guitare / chant — live", "tags": ["arthur"]}, {"file": "silent-injury-arthur-delorme-vocaliste-guitariste-live-concert-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-vocaliste-guitariste-live-concert-noir-blanc-01.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo n&b", "caption": "Arthur Delorme — guitare — live (N&B)", "tags": ["arthur"]}, {"file": "silent-injury-charles-rousseau-guitariste-soliste-live-concert-couleur-01.webp", "src": "assets/gallery/silent-injury-charles-rousseau-guitariste-soliste-live-concert-couleur-01.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo couleur", "caption": "Charles Rousseau — guitare / solo — live", "tags": ["charles"]}, {"file": "silent-injury-charles-rousseau-guitariste-soliste-live-concert-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-charles-rousseau-guitariste-soliste-live-concert-noir-blanc-01.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo n&b", "caption": "Charles Rousseau — guitare / solo — live (N&B)", "tags": ["charles"]}, {"file": "silent-injury-groupe-complet-live-concert-metalcore-scene-01.webp", "src": "assets/gallery/silent-injury-groupe-complet-live-concert-metalcore-scene-01.webp", "alt": "Silent Injury en concert — Silent Injury, photo couleur", "caption": "Silent Injury — live", "tags": ["band"]}, {"file": "silent-injury-photo-groupe-public-fin-de-concert-01.webp", "src": "assets/gallery/silent-injury-photo-groupe-public-fin-de-concert-01.webp", "alt": "Silent Injury en concert — Silent Injury, photo couleur", "caption": "Silent Injury — avec le public", "tags": ["band"]}, {"file": "silent-injury-thibault-vermot-basse-arthur-delorme-guitare-live-couleur-01.webp", "src": "assets/gallery/silent-injury-thibault-vermot-basse-arthur-delorme-guitare-live-couleur-01.webp", "alt": "Silent Injury en concert — Arthur Delorme, Thibault Vermot (basse, guitare), photo couleur", "caption": "Arthur Delorme, Thibault Vermot — basse / guitare — live", "tags": ["arthur", "thibault"]}, {"file": "silent-injury-thibault-vermot-bassiste-live-concert-couleur-01.webp", "src": "assets/gallery/silent-injury-thibault-vermot-bassiste-live-concert-couleur-01.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo couleur", "caption": "Thibault Vermot — basse — live", "tags": ["thibault"]}, {"file": "silent-injury-thibault-vermot-bassiste-live-concert-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-thibault-vermot-bassiste-live-concert-noir-blanc-01.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo n&b", "caption": "Thibault Vermot — basse — live (N&B)", "tags": ["thibault"]}, {"file": "silent-injury-thibault-vermot-bassiste-micro-live-noir-blanc-02.webp", "src": "assets/gallery/silent-injury-thibault-vermot-bassiste-micro-live-noir-blanc-02.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo n&b", "caption": "Thibault Vermot — basse — live (N&B)", "tags": ["thibault"]}];
 
-  const grid = document.getElementById('galleryGrid');
+  const strip = document.getElementById('galleryStrip');
+  const stripPrev = document.querySelector('.strip-nav.prev');
+  const stripNext = document.querySelector('.strip-nav.next');
   const toolbar = document.querySelector('.gallery-toolbar');
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightboxImg');
@@ -879,8 +940,9 @@ img,svg,video{max-width:100%; height:auto}
   }
 
   function render() {
+    if(!strip) return;
     applyFilter();
-    grid.innerHTML = '';
+    strip.innerHTML = '';
     const frag = document.createDocumentFragment();
 
     currentList.forEach((p, idx) => {
@@ -915,7 +977,7 @@ img,svg,video{max-width:100%; height:auto}
       frag.appendChild(a);
     });
 
-    grid.appendChild(frag);
+    strip.appendChild(frag);
   }
 
   function openLightbox(idx) {
@@ -953,6 +1015,31 @@ img,svg,video{max-width:100%; height:auto}
     filter = btn.dataset.filter;
     toolbar.querySelectorAll('.chip').forEach(b => b.classList.toggle('is-active', b === btn));
     render();
+  });
+
+
+  // Strip navigation (carousel-like)
+  function stepStrip(dir){
+    if(!strip) return;
+    const card = strip.querySelector('.ph');
+    const dx = (card ? card.getBoundingClientRect().width : 112) + 10;
+    strip.scrollBy({ left: dir * dx * 3, behavior: 'smooth' });
+  }
+  stripPrev?.addEventListener('click', () => stepStrip(-1));
+  stripNext?.addEventListener('click', () => stepStrip( 1));
+
+  // Wheel vertical -> horizontal (desktop comfort)
+  strip?.addEventListener('wheel', (e) => {
+    if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
+      e.preventDefault();
+      strip.scrollBy({ left: e.deltaY, behavior: 'auto' });
+    }
+  }, { passive:false });
+
+  // Keyboard arrows when strip is focused
+  strip?.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowRight') strip.scrollBy({ left: 320, behavior: 'smooth' });
+    if(e.key === 'ArrowLeft')  strip.scrollBy({ left: -320, behavior: 'smooth' });
   });
 
   // Lightbox controls
