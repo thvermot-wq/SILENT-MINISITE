@@ -309,16 +309,14 @@ img,svg,video{max-width:100%; height:auto}
     .hero-media .cap{position:absolute; left:12px; bottom:12px; display:flex; gap:8px; align-items:center; background:rgba(0,0,0,.45);
       border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:6px 10px; color:rgba(255,255,255,.92); font-size:12px; backdrop-filter: blur(8px);}
 
-    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; align-items:start;}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
     @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
     h2{margin:0 0 10px; font-size:18px; letter-spacing:.3px;}
     p{margin:0 0 10px}
     .muted{color:var(--muted)}
     .section{margin-top:22px}
     /* Press card should not stretch inside grid */
-    #press{align-self:start}
-
-    .list{margin:0; padding-left:18px}
+.list{margin:0; padding-left:18px}
     .cover{display:flex; gap:14px; align-items:flex-start;}
     .cover img{width:140px; height:140px; border-radius:16px; border:1px solid var(--line); object-fit:cover;}
     @media (max-width: 520px){ .cover{flex-direction:column} .cover img{width:100%; height:auto; aspect-ratio:1/1} }
@@ -572,7 +570,7 @@ img,svg,video{max-width:100%; height:auto}
           <li>Arthur Delorme — rhythm guitar, voice</li>
           <li>Thibault Vermot — bass</li>
           <li>Charles Rousseau — lead guitar</li>
-          <li>XXXXX — drums</li>
+          <li>Vincent Louvel — drums</li>
         </ul>
       </div>
     </div>
@@ -707,8 +705,12 @@ img,svg,video{max-width:100%; height:auto}
       </div>
       <p style="margin-top:12px">Disponibilités / zone de déplacement : <span class="mono">[Normandie / Paris / Nord]</span></p>
     </div>
+  </section>
 
-    <div class="card" id="press">
+  <section id="press">
+
+
+    <div class="card">
       <h2>Presse / radio</h2>
       <div class="quote">
         « C’est très influencé Machine Head, mais c’est du bon Machine Head. 
@@ -718,8 +720,8 @@ img,svg,video{max-width:100%; height:auto}
       <div class="cta" style="margin-top:12px">
         <a class="btn" href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book</a>
       </div>
-    </div>
-  </section>
+    </div>  </section>
+
 
   <section id="tech" class="grid">
     <div class="card">
