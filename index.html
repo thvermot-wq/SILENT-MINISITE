@@ -309,12 +309,15 @@ img,svg,video{max-width:100%; height:auto}
     .hero-media .cap{position:absolute; left:12px; bottom:12px; display:flex; gap:8px; align-items:center; background:rgba(0,0,0,.45);
       border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:6px 10px; color:rgba(255,255,255,.92); font-size:12px; backdrop-filter: blur(8px);}
 
-    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px;}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; align-items:start;}
     @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
     h2{margin:0 0 10px; font-size:18px; letter-spacing:.3px;}
     p{margin:0 0 10px}
     .muted{color:var(--muted)}
     .section{margin-top:22px}
+    /* Press card should not stretch inside grid */
+    #press{align-self:start}
+
     .list{margin:0; padding-left:18px}
     .cover{display:flex; gap:14px; align-items:flex-start;}
     .cover img{width:140px; height:140px; border-radius:16px; border:1px solid var(--line); object-fit:cover;}
@@ -467,9 +470,9 @@ img,svg,video{max-width:100%; height:auto}
         <a href="#video">Clip</a>
         <a href="#visualizer">Visualizer</a>
         <a href="#live">Live</a>
-        <a href="#photos">Photos</a>
         <a href="#press">Presse</a>
         <a href="#tech">Tech</a>
+        <a href="#photos">Photos</a>
         <a href="#contact">Contact</a>
       </nav>
 
