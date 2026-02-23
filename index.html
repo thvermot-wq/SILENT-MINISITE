@@ -116,7 +116,10 @@
 }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
+    
+    html{scroll-padding-top:90px}
+    section{scroll-margin-top:90px}
+body{
       margin:0;
       font:16px/1.55 var(--font-sans);
       color:var(--text);
@@ -186,6 +189,18 @@ img,svg,video{max-width:100%; height:auto}
 
     /* --- Main nav --- */
     .main-nav{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
+
+    @media (max-width: 720px){
+      .main-nav{
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        white-space:nowrap;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+      }
+      .main-nav::-webkit-scrollbar{display:none}
+    }
+
 
     /* --- Language switch (FR / EN) : drapeaux seuls --- */
     .lang-switch{
@@ -426,6 +441,13 @@ img,svg,video{max-width:100%; height:auto}
 @media (max-width:720px){.ph .cap{display:none}}
 .noscript-links{margin:10px 0 0;padding-left:18px}
 .noscript-links li{margin:4px 0}
+
+
+    /* --- Details / accordion (Checklist) --- */
+    details.card > summary{cursor:pointer; list-style:none;}
+    details.card > summary::-webkit-details-marker{display:none;}
+    details.card > summary h2{display:inline; margin:0;}
+    details.card[open] > summary{margin-bottom:10px;}
 
     .video{
       aspect-ratio:16/9;
@@ -810,8 +832,8 @@ img,svg,video{max-width:100%; height:auto}
       </div>
     </div>
 
-    <div class="card">
-      <h2>Checklist (pour prog)</h2>
+    <details class="card checklist" id="checklist">
+      <summary><h2>Checklist (pour prog)</h2></summary>
       <ul class="list">
         <li>Press book : <a href="assets/presskit.pdf" target="_blank" rel="noopener">assets/presskit.pdf</a></li>
         <li>Clip : <a href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">YouTube</a></li>
@@ -829,7 +851,7 @@ img,svg,video{max-width:100%; height:auto}
       <p class="muted" style="margin-top:10px">
         Mentions : Asso La Pelle A Breakdown • Groupe enregistré SACEM • Set 40–90 min.
       </p>
-    </div>
+    </details>
   </section>
 
   <footer>
