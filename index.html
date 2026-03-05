@@ -44,7 +44,9 @@
         "sameAs": [
           "https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8",
           "https://silentinjury.bandcamp.com/album/silent-injury",
-          "https://www.youtube.com/watch?v=wf1ajH-h7EQ"
+          "https://www.youtube.com/watch?v=wf1ajH-h7EQ",
+          "https://www.instagram.com/silentinjuryofficiel/",
+          "https://www.facebook.com/silentinjuryofficiel"
         ],
         "description": "Metalcore (FR). EPK / Booking : liens, live, presse, tech, contact."
       },
@@ -194,6 +196,17 @@ img,svg,video{max-width:100%; height:auto}
       align-items:center;
       margin-left:6px;
     }
+    .social-nav{display:flex; gap:6px; align-items:center}
+    .social-nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:13px;
+      padding:7px 9px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .social-nav a:hover{color:var(--text); background:rgba(255,255,255,.08)}
     .lang-btn{
       display:inline-flex;
       align-items:center;
@@ -474,6 +487,11 @@ img,svg,video{max-width:100%; height:auto}
         <a href="#contact">Contact</a>
       </nav>
 
+      <div class="social-nav" aria-label="Réseaux sociaux">
+        <a href="https://www.instagram.com/silentinjuryofficiel/" target="_blank" rel="noopener" aria-label="Instagram">📸 IG</a>
+        <a href="https://www.facebook.com/silentinjuryofficiel" target="_blank" rel="noopener" aria-label="Facebook">👍 FB</a>
+      </div>
+
       <div class="lang-switch" aria-label="Langue">
         <a class="lang-btn is-active" href="./" aria-current="page" aria-label="Français" title="Français">
           <span class="flag" aria-hidden="true">🇫🇷</span>
@@ -520,6 +538,8 @@ img,svg,video{max-width:100%; height:auto}
         <a class="btn" href="mailto:silentinjuryofficiel@gmail.com?subject=Contacter%20Silent" target="_blank" rel="noopener">✉️ Booking / Contact</a>
         <a class="btn" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">▶️ Clip “Break The Mirror”</a>
         <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp (album)</a>
+        <a class="btn" href="https://www.instagram.com/silentinjuryofficiel/" target="_blank" rel="noopener">📸 Instagram</a>
+        <a class="btn" href="https://www.facebook.com/silentinjuryofficiel" target="_blank" rel="noopener">👍 Facebook</a>
         <a class="btn" href="downloads/silent-injury-photos-hd.zip" download>📷 Photos HD (ZIP)</a>
       </div>
 
@@ -812,6 +832,8 @@ img,svg,video{max-width:100%; height:auto}
       <div class="cta" style="margin-top:12px">
         <a class="btn primary" href="mailto:silentinjuryofficiel@gmail.com?subject=Contacter%20Silent">✉️ Contacter</a>
         <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp</a>
+        <a class="btn" href="https://www.instagram.com/silentinjuryofficiel/" target="_blank" rel="noopener">📸 Instagram</a>
+        <a class="btn" href="https://www.facebook.com/silentinjuryofficiel" target="_blank" rel="noopener">👍 Facebook</a>
       </div>
     </div>
 
@@ -821,6 +843,8 @@ img,svg,video{max-width:100%; height:auto}
         <li>Press book : <a href="assets/presskit.pdf" target="_blank" rel="noopener">assets/presskit.pdf</a></li>
         <li>Clip : <a href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">YouTube</a></li>
         <li>Bandcamp : <a href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">silentinjury.bandcamp.com</a></li>
+        <li>Instagram : <a href="https://www.instagram.com/silentinjuryofficiel/" target="_blank" rel="noopener">@silentinjuryofficiel</a></li>
+        <li>Facebook : <a href="https://www.facebook.com/silentinjuryofficiel" target="_blank" rel="noopener">Silent Injury</a></li>
         <li>
           Streaming :
           <a href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener">Spotify</a>
