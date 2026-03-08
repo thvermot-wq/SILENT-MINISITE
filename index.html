@@ -5,31 +5,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Silent Injury | Home Page</title>
   <meta name="description" content="Silent Injury Homepage — official home page: music, videos, live dates, press kit, tech rider and contact." />
-  <meta name="theme-color" content="#0b0c10" />
+  <meta name="theme-color" content="#060608" />
+  <link rel="canonical" href="https://thvermot-wq.github.io/SILENT-MINISITE/" />
+  <link rel="alternate" hreflang="fr" href="https://thvermot-wq.github.io/SILENT-MINISITE/" />
+  <link rel="alternate" hreflang="en" href="https://thvermot-wq.github.io/SILENT-MINISITE/en/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-<link rel="canonical" href="https://thvermot-wq.github.io/SILENT-MINISITE/" />
-<link rel="alternate" hreflang="fr" href="https://thvermot-wq.github.io/SILENT-MINISITE/" />
-<link rel="alternate" hreflang="en" href="https://thvermot-wq.github.io/SILENT-MINISITE/en/" />
-<meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:site_name" content="Silent Injury" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Silent Injury | Home Page" />
+  <meta property="og:description" content="Silent Injury Homepage: official music, video, live, press, tech and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thvermot-wq.github.io/SILENT-MINISITE/" />
+  <meta property="og:image" content="https://thvermot-wq.github.io/SILENT-MINISITE/assets/og-cover.jpg" />
+  <meta property="og:image:alt" content="Silent Injury — EPK / Booking" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-<meta property="og:site_name" content="Silent Injury" />
-<meta property="og:locale" content="fr_FR" />
-<meta property="og:title" content="Silent Injury | Home Page" />
-<meta property="og:description" content="Silent Injury Homepage: official music, video, live, press, tech and contact." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://thvermot-wq.github.io/SILENT-MINISITE/" />
-<meta property="og:image" content="https://thvermot-wq.github.io/SILENT-MINISITE/assets/og-cover.jpg" />
-<meta property="og:image:alt" content="Silent Injury — EPK / Booking" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Silent Injury | Home Page" />
+  <meta name="twitter:description" content="Silent Injury Homepage: official music, video, live, press, tech and contact." />
+  <meta name="twitter:image" content="https://thvermot-wq.github.io/SILENT-MINISITE/assets/og-cover.jpg" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Silent Injury | Home Page" />
-<meta name="twitter:description" content="Silent Injury Homepage: official music, video, live, press, tech and contact." />
-<meta name="twitter:image" content="https://thvermot-wq.github.io/SILENT-MINISITE/assets/og-cover.jpg" />
-
-
-  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,9 +59,6 @@
   </script>
 
   <link rel="icon" href="assets/logo.png" />
-
-<link rel="preload" href="assets/silentinjury.mp3" as="audio" type="audio/mpeg" />
-<link rel="preload" href="assets/PARALLEL720.mp4" as="video" type="video/mp4" />
 
   <style>
     /* Ajoute manuellement le fichier assets/fonts/Omicron.ttf dans le repo pour activer le titre du hero. */
@@ -311,376 +305,542 @@
       align-items: end;
       overflow: clip;
       background:
-        url("assets/logo-watermark.png")
-        center / min(900px, 78vw) no-repeat;
-      opacity:.07; /* ajuste : 0.05–0.12 */
-      filter: drop-shadow(0 30px 80px rgba(0,0,0,.55));
-      pointer-events:none;
-      z-index:0;
-    }
-    header, main{position:relative; z-index:1;}
-
-    a{color:inherit}
-
-img,svg,video{max-width:100%; height:auto}
-:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
-
-@media (prefers-reduced-motion: reduce){
-  *{scroll-behavior:auto !important; transition:none !important; animation:none !important}
-}
-@supports not (backdrop-filter: blur(10px)){
-  header{background:rgba(11,12,16,.92)}
-}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 64px}
-    header{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(120%) blur(10px);
-      background:rgba(11,12,16,.72);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:12px 18px;
-      display:flex;
-      align-items:center;
-      gap:14px;
-      justify-content:space-between;
-    }
-    .brand{display:flex; align-items:center; gap:12px; letter-spacing:.6px; min-width: 190px;}
-    .brand img{height:30px; width:auto; display:block; filter: drop-shadow(0 10px 30px rgba(0,0,0,.35));}
-    .brand .meta{display:flex; flex-direction:column; gap:2px}
-    .brand strong{font-size:16px; line-height:1}
-    .brand span{color:var(--muted); font-size:12px}
-    .nav a{text-decoration:none; color:var(--muted); font-size:14px; padding:8px 10px; border-radius:10px}
-    .nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-
-    .nav-right{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      align-items:center;
+        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.88)),
+        linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.55) 34%, rgba(0,0,0,.12) 100%),
+        url('assets/gallery/15-silent-injury-live-arthur-delorme-thibault-vermot-vincent-louvel-groupe-noir-blanc.webp') center top / cover no-repeat;
     }
 
-    /* --- Main nav --- */
-    .main-nav{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
-
-    /* --- Language switch (FR / EN) : drapeaux seuls --- */
-    .lang-switch{
-      display:flex;
-      gap:6px;
-      align-items:center;
-      margin-left:6px;
-    }
-    .social-nav{display:flex; gap:6px; align-items:center}
-    .social-nav a{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      text-decoration:none;
-      color:var(--muted);
-      font-size:13px;
-      padding:7px 9px;
-      border-radius:10px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-    }
-    .social-nav a:hover{color:var(--text); background:rgba(255,255,255,.08)}
-    .icon-logo{width:16px; height:16px; display:inline-block; flex:0 0 16px}
-    .btn .icon-logo{width:18px; height:18px; flex:0 0 18px}
-    .lang-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:42px;
-      height:36px;
-      padding:0;
-      border-radius:10px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      font-weight:800;
-      font-size:13px;
-      text-decoration:none;
-    }
-    .flag{width:22px; height:16px; display:block; border-radius:2px; box-shadow:0 0 0 1px rgba(255,255,255,.16)}
-    .lang-btn:hover{background:rgba(255,255,255,.08)}
-    .lang-btn.is-active{
-      background:rgba(255,255,255,.10);
-      border-color:rgba(255,255,255,.22);
-    }
-    .lang-btn.is-disabled{opacity:.55; cursor:not-allowed;}
-    .lang-btn.is-disabled:hover{background:rgba(255,255,255,.04)}
-
-    /* --- Mini audio player (Hero) --- */
-    .player-wrap{margin-top:12px}
-    .player-label{
-      display:flex;
-      gap:10px;
-      align-items:baseline;
-      flex-wrap:wrap;
-      margin:0 0 8px;
-    }
-    .player-label b{letter-spacing:.2px}
-    .player-label span{color:var(--muted); font-size:13px}
-
-    .player{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      border-radius:12px;
-      width:fit-content;
-      max-width:100%;
-    }
-    .player-btn{
-      width:36px;
-      height:32px;
-      border-radius:10px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      cursor:pointer;
-      font-weight:900;
-      line-height:1;
-    }
-    .player-btn:hover{background:rgba(255,255,255,.08)}
-    .player-bar{
-      width:220px;
-      height:10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(0,0,0,.25);
-      overflow:hidden;
-      cursor:pointer;
-    }
-    .player-fill{
-      height:100%;
-      width:0%;
-      background:linear-gradient(135deg, rgba(229,57,53,.95), rgba(124,77,255,.65));
-    }
-    .player-time{
-      min-width:44px;
-      font-size:12px;
-      color:var(--muted);
-      font-variant-numeric: tabular-nums;
-    }
-    @media (max-width: 520px){
-      .player-bar{width:150px}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 16% 15%, rgba(207,16,40,.33), transparent 32%),
+        linear-gradient(180deg, rgba(0,0,0,.14), rgba(0,0,0,.36));
+      pointer-events: none;
     }
 
-    .card{background:rgba(16,19,26,.86); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow: 0 20px 60px rgba(0,0,0,.25);}
-    .hero{padding:30px 0 10px; display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:stretch;}
-    @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
-
-    /* --- H1 multi-lignes --- */
-    .hero-title{margin:0 0 10px; line-height:1.05; letter-spacing:.4px}
-    .hero-name{display:block; font-size:clamp(34px, 5vw, 48px); letter-spacing:.7px}
-    .hero-genre{display:block; margin-top:6px; font-size:clamp(16px, 2.2vw, 22px); color:var(--muted); font-weight:800}
-    .hero-tag{display:block; margin-top:10px; font-size:clamp(14px, 2vw, 18px); font-weight:800}
-
-    .tagline{color:var(--muted); margin:0 0 14px; max-width:62ch}
-
-    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-    .btn{display:inline-flex; align-items:center; gap:8px; border-radius:12px; padding:10px 12px; border:1px solid var(--line);
-      background:rgba(255,255,255,.04); color:var(--text); text-decoration:none; font-weight:700; font-size:14px;}
-    .btn:hover{background:rgba(255,255,255,.08)}
-    .btn.primary{background:linear-gradient(135deg, rgba(229,57,53,.95), rgba(124,77,255,.65)); border-color:rgba(255,255,255,.18);}
-    .btn.primary:hover{filter:brightness(1.05)}
-
-    /* --- Boutons streamers (icônes inline SVG) --- */
-    .btn.streamer svg{width:18px;height:18px;display:block}
-    .btn.streamer .label{display:inline-block}
-
-    .badges{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0}
-    .badge{font-size:12px; color:var(--muted); border:1px solid var(--line); background:rgba(255,255,255,.04); padding:6px 10px; border-radius:999px;}
-    .quote{margin:12px 0 0; padding:12px 14px; border-left:3px solid var(--accent); background:rgba(255,255,255,.03); border-radius:12px;}
-    .quote small{display:block; color:var(--muted); margin-top:6px}
-    .hero-media{padding:0; overflow:hidden; position:relative;}
-    .hero-media img{display:block; width:100%; height:100%; object-fit:cover; aspect-ratio: 4 / 3;}
-    .hero-media .cap{position:absolute; left:12px; bottom:12px; display:flex; gap:8px; align-items:center; background:rgba(0,0,0,.45);
-      border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:6px 10px; color:rgba(255,255,255,.92); font-size:12px; backdrop-filter: blur(8px);}
-
-    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
-    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
-    h2{margin:0 0 10px; font-size:18px; letter-spacing:.3px;}
-    p{margin:0 0 10px}
-    .muted{color:var(--muted)}
-    .section{margin-top:22px}
-    /* Press card should not stretch inside grid */
-.list{margin:0; padding-left:18px}
-    .cover{display:flex; gap:14px; align-items:flex-start;}
-    .cover img{width:140px; height:140px; border-radius:16px; border:1px solid var(--line); object-fit:cover;}
-    @media (max-width: 520px){ .cover{flex-direction:column} .cover img{width:100%; height:auto; aspect-ratio:1/1} }
-
-    .dates{display:flex; flex-direction:column; gap:8px;}
-    .date{display:flex; justify-content:space-between; gap:10px; padding:10px 12px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.03);}
-    .date b{font-size:13px}
-    .date span{color:var(--muted); font-size:13px}
-    .pill{display:inline-flex; align-items:center; padding:4px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.04); color:var(--muted); font-size:12px; white-space:nowrap;}
-
-    .gallery{
-  --thumb: 120px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(var(--thumb), 1fr));
-  gap:10px;
-}
-@media (max-width: 900px){ .gallery{--thumb: 108px} }
-@media (max-width: 520px){ .gallery{--thumb: 96px} }
-
-/* thumbs carrés */
-.ph{
-  display:block;
-  position:relative;
-  aspect-ratio: 1 / 1;
-  border-radius:12px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-}
-.ph img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* --- Galerie défilante compacte (mobile-friendly) --- */
-.gallery-strip-wrap{
-  display:grid;
-  grid-template-columns: 36px 1fr 36px;
-  gap:10px;
-  align-items:center;
-}
-
-.strip-nav{
-  width:36px; height:36px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.04);
-  color:var(--text);
-  cursor:pointer;
-  font-size:22px;
-  line-height:1;
-}
-.strip-nav:hover{ background:rgba(255,255,255,.08); }
-
-.gallery-strip{
-  display:flex;
-  gap:10px;
-  overflow:auto;
-  scroll-snap-type:x mandatory;
-  padding:6px 2px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(255,255,255,.02);
-  -webkit-overflow-scrolling: touch; /* inertie iOS */
-  scroll-behavior: smooth;
-}
-.gallery-strip::-webkit-scrollbar{ height:10px; }
-.gallery-strip::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.12); border-radius:999px; }
-
-/* la carte thumb reste carrée ; ici on fixe sa taille */
-.gallery-strip .ph{
-  flex: 0 0 112px;
-  aspect-ratio: 1 / 1;
-  scroll-snap-align:start;
-  -webkit-tap-highlight-color: transparent;
-}
-.gallery-strip .ph img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-@media (max-width:520px){
-  .gallery-strip-wrap{ grid-template-columns: 30px 1fr 30px; }
-  .gallery-strip .ph{ flex-basis: 96px; }
-  .strip-nav{ width:30px; height:30px; border-radius:10px; font-size:20px; }
-}
-
-/* Galerie — bonus pro */
-.gallery-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
-.chip{border:1px solid var(--stroke);background:rgba(255,255,255,.03);color:var(--text);padding:6px 10px;border-radius:999px;font-size:.85rem;cursor:pointer}
-.chip:hover{border-color:rgba(111,255,159,.35)}
-.chip.is-active{background:rgba(111,255,159,.12);border-color:rgba(111,255,159,.35)}
-.ph{position:relative}
-.ph .cap{position:absolute;left:0;right:0;bottom:0;padding:8px 10px;font-size:.8rem;line-height:1.2;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.78));opacity:0;transition:opacity .2s}
-.ph:hover .cap,.ph:focus .cap{opacity:1}
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px}
-.lightbox.is-open{display:flex}
-.lightbox__inner{position:relative;max-width:min(1100px, 96vw);max-height:92vh;width:100%}
-.lightbox__img{width:100%;height:auto;max-height:78vh;object-fit:contain;border-radius:12px;border:1px solid var(--stroke);background:#000}
-.lightbox__caption{margin-top:10px;color:var(--muted);font-size:.95rem}
-.lightbox__close,.lightbox__prev,.lightbox__next{position:absolute;background:rgba(0,0,0,.45);border:1px solid var(--stroke);color:var(--text);width:40px;height:40px;border-radius:999px;display:grid;place-items:center;cursor:pointer}
-.lightbox__close{top:10px;right:10px}
-.lightbox__prev{left:10px;top:50%;transform:translateY(-50%)}
-.lightbox__next{right:10px;top:50%;transform:translateY(-50%)}
-@media (max-width:720px){.ph .cap{display:none}}
-.noscript-links{margin:10px 0 0;padding-left:18px}
-.noscript-links li{margin:4px 0}
-
-    .video{
-      aspect-ratio:16/9;
-      width:100%;
-      border-radius:16px;
-      border:1px solid var(--line);
-      overflow:hidden;
-      background:rgba(255,255,255,.03);
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 140px;
+      background: linear-gradient(180deg, transparent, #050507 85%);
+      pointer-events: none;
     }
-    .video iframe{width:100%; height:100%; border:0}
-    .video video{width:100%; height:100%; border:0; display:block}
 
-    footer{margin-top:26px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between; align-items:center;}
-    .mono{font-family:var(--font-mono)}
+    .hero__watermark {
+      position: absolute;
+      right: min(4vw, 3rem);
+      top: 18vh;
+      width: min(46vw, 520px);
+      opacity: .09;
+      filter: drop-shadow(0 0 25px rgba(255,255,255,.08));
+      pointer-events: none;
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      padding: 8.2rem 0 3rem;
+      min-height: 100svh;
+      display: flex;
+      align-items: end;
+    }
+
+    .hero__content {
+      width: min(100%, 780px);
+      padding-bottom: clamp(1rem, 4vw, 3rem);
+    }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #e8ebf2;
+      font-weight: 700;
+    }
+
+    .hero__title {
+      margin: 0;
+      font-family: "Omicron", "Orbitron", Inter, sans-serif;
+      font-size: clamp(3rem, 11vw, 8rem);
+      line-height: .88;
+      font-weight: 400;
+      letter-spacing: .08em;
+      text-transform: lowercase;
+      text-wrap: balance;
+      text-shadow: 0 0 28px rgba(255,255,255,.06);
+    }
+
+    .hero__dek {
+      max-width: 36ch;
+      margin: 1.1rem 0 0;
+      font-size: clamp(1.02rem, 2.2vw, 1.32rem);
+      color: #edf0f6;
+    }
+
+    .hero__meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 1.6rem 0 0;
+      color: var(--muted);
+      font-size: .82rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .85rem;
+      margin-top: 1.6rem;
+    }
+
+    .cta {
+      min-height: 48px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      padding: .82rem 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .76rem;
+      background: rgba(255,255,255,.04);
+      transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+    }
+
+    .cta:hover { transform: translateY(-1px); }
+
+    .cta--primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 14px 40px rgba(207,16,40,.34);
+    }
+
+    .cta--ghost {
+      background: rgba(0,0,0,.22);
+      border-color: rgba(255,255,255,.24);
+    }
+
+    .scroll-anchor {
+      scroll-margin-top: 94px;
+    }
+
+    .section {
+      position: relative;
+      padding: clamp(3.2rem, 7vw, 6rem) 0;
+    }
+
+    .section + .section { border-top: 1px solid var(--line); }
+
+    .section-heading {
+      display: grid;
+      gap: .8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .section-kicker {
+      font-size: .72rem;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 3.15rem);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .section-intro {
+      margin: 0;
+      max-width: 48ch;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .feature {
+      display: grid;
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .feature__media,
+    .feature__copy,
+    .panel,
+    .tour-board,
+    .video-card,
+    .gallery-card,
+    .contact-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .feature__media {
+      overflow: hidden;
+      min-height: 320px;
+    }
+
+    .feature__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    .feature__copy {
+      padding: clamp(1.35rem, 3vw, 2rem);
+      display: grid;
+      align-content: center;
+      gap: 1rem;
+    }
+
+    .feature__eyebrow,
+    .panel__eyebrow,
+    .video-card__eyebrow {
+      margin: 0;
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      font-weight: 700;
+    }
+
+    .feature__title {
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 3.4rem);
+      line-height: .94;
+      text-transform: uppercase;
+    }
+
+    .feature__copy p,
+    .panel p,
+    .video-card p,
+    .contact-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .feature__stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: .2rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      padding: .55rem .85rem;
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #eef2fb;
+    }
+
+    .tour-board {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .tour-board::before {
+      content: "";
+      position: absolute;
+      inset: auto -7% -34% auto;
+      width: min(48vw, 460px);
+      aspect-ratio: 1;
+      background: url('assets/logo-watermark.png') center/contain no-repeat;
+      opacity: .055;
+      pointer-events: none;
+      filter: drop-shadow(0 0 18px rgba(255,255,255,.08));
+    }
+
+    .tour-board__grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .tour-board__headline {
+      display: grid;
+      gap: .5rem;
+      max-width: 45rem;
+    }
+
+    .tour-list {
+      list-style: none;
+      margin: .2rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: .85rem;
+    }
+
+    .tour-list li {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .25rem;
+      padding: 1rem 0;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
+    .tour-list li:first-child { border-top: 0; }
+
+    .tour-list strong {
+      font-size: .86rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .tour-list span {
+      color: var(--muted);
+    }
+
+    .cards-4 {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .panel {
+      padding: 1.2rem;
+      display: grid;
+      gap: .8rem;
+      min-height: 100%;
+    }
+
+    .panel h3,
+    .contact-card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .video-layout {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    .video-card {
+      overflow: hidden;
+    }
+
+    .video-card__copy {
+      padding: 1rem 1.1rem 1.1rem;
+      display: grid;
+      gap: .7rem;
+    }
+
+    .video-frame {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      border: 0;
+      display: block;
+      background: #000;
+    }
+
+    .gallery-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      min-height: 100%;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      filter: contrast(1.03) brightness(.94);
+      transition: transform .35s ease;
+    }
+
+    .gallery-card:hover img { transform: scale(1.03); }
+
+    .about-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+    }
+
+    .about-copy {
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .about-copy p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 56ch;
+    }
+
+    .about-metrics {
+      display: grid;
+      gap: .75rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+      padding: 1rem;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1;
+      margin-bottom: .4rem;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .about-photo {
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      min-height: 320px;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+      padding: 1.3rem;
+      display: grid;
+      gap: .85rem;
+      align-content: start;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      margin-top: .2rem;
+    }
+
+    .contact-email {
+      word-break: break-word;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 1.8rem 0 2.3rem;
+      color: var(--muted);
+    }
+
+    .footer__row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer__social a {
+      text-decoration: none;
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    @media (min-width: 720px) {
+      .cards-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid { grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr); }
+    }
+
+    @media (min-width: 900px) {
+      .feature { grid-template-columns: minmax(320px, .9fr) minmax(0, 1.1fr); }
+      .video-layout { grid-template-columns: minmax(0, 1.4fr) minmax(320px, .8fr); }
+      .tour-list li {
+        grid-template-columns: 190px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 1rem;
+      }
+      .tour-list li a { justify-self: end; }
+      .tour-board__grid { grid-template-columns: minmax(0, 1.3fr) minmax(360px, .9fr); align-items: start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 <body>
-<svg aria-hidden="true" width="0" height="0" style="position:absolute; width:0; height:0; overflow:hidden">
-  <defs>
-    <symbol id="icon-instagram" viewBox="0 0 24 24">
-      <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" ry="5.2" fill="none" stroke="currentColor" stroke-width="2"></rect>
-      <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="2"></circle>
-      <circle cx="17.3" cy="6.8" r="1.2" fill="currentColor"></circle>
-    </symbol>
-    <symbol id="icon-facebook" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.2-1.5 1.5-1.5h1.4V5c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7v3h2.7v7h3.8z"></path>
-    </symbol>
-    <symbol id="icon-flag-fr" viewBox="0 0 60 40">
-      <rect width="20" height="40" x="0" fill="#0055A4"></rect>
-      <rect width="20" height="40" x="20" fill="#FFFFFF"></rect>
-      <rect width="20" height="40" x="40" fill="#EF4135"></rect>
-    </symbol>
-    <symbol id="icon-flag-en" viewBox="0 0 60 40">
-      <rect width="60" height="40" fill="#012169"></rect>
-      <path d="M0 0 L24 0 L60 24 L60 40 L36 40 L0 16 Z" fill="#FFFFFF"></path>
-      <path d="M60 0 L36 0 L0 24 L0 40 L24 40 L60 16 Z" fill="#FFFFFF"></path>
-      <path d="M0 0 L9 0 L60 31 L60 40 L51 40 L0 9 Z" fill="#C8102E"></path>
-      <path d="M60 0 L51 0 L0 31 L0 40 L9 40 L60 9 Z" fill="#C8102E"></path>
-      <rect x="24" width="12" height="40" fill="#FFFFFF"></rect>
-      <rect y="14" width="60" height="12" fill="#FFFFFF"></rect>
-      <rect x="26.5" width="7" height="40" fill="#C8102E"></rect>
-      <rect y="16.5" width="60" height="7" fill="#C8102E"></rect>
-    </symbol>
-  </defs>
-</svg>
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="Accueil Silent Injury">
+        <img src="assets/logo-watermark.png" alt="Logo Silent Injury" />
+        <span class="brand__meta">
+          <span class="brand__title">Silent Injury</span>
+          <span class="brand__sub">Metalcore · France</span>
+        </span>
+      </a>
 
-<!-- Audio track: "Silent Injury" (assets/silentinjury.*) -->
-<audio id="epk-audio" preload="auto">
-  <source src="assets/silentinjury.mp3" type="audio/mpeg">
-  <source src="assets/silentinjury.ogg" type="audio/ogg">
-</audio>
-
-<header>
-  <div class="nav">
-    <div class="brand">
-      <img src="assets/logo.png" alt="Silent Injury — logo" />
-      <div class="meta">
-        <strong>Silent Injury</strong>
-        <span>EPK / Booking</span>
+      <div class="header-actions">
+        <a class="lang-link" href="/SILENT-MINISITE/en/" aria-label="Version anglaise">EN</a>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Ouvrir le menu">
+          Menu
+          <span class="menu-button__bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </div>
     </div>
   </header>
@@ -703,19 +863,12 @@ img,svg,video{max-width:100%; height:auto}
         <a href="/SILENT-MINISITE/en/">English</a>
       </nav>
 
-      <div class="social-nav" aria-label="Réseaux sociaux">
-        <a href="https://www.instagram.com/silentinjury_band/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon-logo" aria-hidden="true"><use href="#icon-instagram"></use></svg><span>Instagram</span></a>
-        <a href="https://www.facebook.com/profile.php?id=61552999371364" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon-logo" aria-hidden="true"><use href="#icon-facebook"></use></svg><span>Facebook</span></a>
-      </div>
-
-      <div class="lang-switch" aria-label="Langue">
-        <a class="lang-btn is-active" href="/SILENT-MINISITE/" aria-current="page" aria-label="Français" title="Français">
-          <svg class="flag" aria-hidden="true" viewBox="0 0 60 40"><use href="#icon-flag-fr"></use></svg>
-        </a>
-        <!-- Quand la page EN existera : remplace href="#" par href="en/" et supprime is-disabled + aria-disabled + tabindex -->
-        <a class="lang-btn" href="/SILENT-MINISITE/en/" aria-label="English" title="English">
-          <svg class="flag" aria-hidden="true" viewBox="0 0 60 40"><use href="#icon-flag-en"></use></svg>
-        </a>
+      <div class="menu-overlay__footer">
+        <span>Break The Mirror · official video online</span>
+        <div class="footer__social" aria-label="Réseaux sociaux">
+          <a href="https://www.instagram.com/silentinjury_band/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61552999371364" target="_blank" rel="noopener">Facebook</a>
+        </div>
       </div>
     </div>
   </div>
@@ -727,7 +880,7 @@ img,svg,video{max-width:100%; height:auto}
         <div class="hero__content">
           <p class="eyebrow">Latest video · Break The Mirror</p>
           <h1 class="hero__title">silent injury</h1>
-          <p class="hero__dek">Metalcore frontal et mélodique. Nouveau cycle de sorties. Nouveau set live.</p>
+          <p class="hero__dek">Metalcore frontal et mélodique, refrains qui mordent, scène tendue. Nouveau cycle de sorties. Nouveau set live.</p>
           <div class="hero__meta" aria-label="Informations rapides">
             <span>France</span>
             <span>Metalcore</span>
@@ -747,120 +900,18 @@ img,svg,video{max-width:100%; height:auto}
         <div class="section-heading">
           <p class="section-kicker">Featured</p>
           <h2 class="section-title">Latest release</h2>
-          <p class="section-intro"></p>
+          <p class="section-intro">Un bloc clair, immédiat, au centre de la page : l’album, le clip, les liens qui comptent. Pas de détour inutile.</p>
         </div>
 
-      <div class="cta">
-        <a class="btn primary" href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book (PDF)</a>
-        <a class="btn" href="mailto:silentinjuryofficiel@gmail.com?subject=Contacter%20Silent" target="_blank" rel="noopener">✉️ Booking / Contact</a>
-        <a class="btn" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">▶️ Clip “Break The Mirror”</a>
-        <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp (album)</a>
-        <a class="btn" href="https://www.instagram.com/silentinjury_band/" target="_blank" rel="noopener"><svg class="icon-logo" aria-hidden="true"><use href="#icon-instagram"></use></svg><span>Instagram</span></a>
-        <a class="btn" href="https://www.facebook.com/profile.php?id=61552999371364" target="_blank" rel="noopener"><svg class="icon-logo" aria-hidden="true"><use href="#icon-facebook"></use></svg><span>Facebook</span></a>
-        <a class="btn" href="downloads/silent-injury-photos-hd.zip" download>📷 Photos HD (ZIP)</a>
-      </div>
-
-      <div class="badges">
-        <span class="badge">Album : <b>Silent Injury</b> (10/01/2025)</span>
-        <span class="badge">Set : 40 min • 60–75 min • jusqu’à 90 min</span>
-        <span class="badge">Structure : Asso La Pelle A Breakdown</span>
-        <span class="badge">Droits : groupe enregistré SACEM</span>
-      </div>
-
-      <div class="quote">
-        « C’est très influencé Machine Head, mais c’est du bon Machine Head. »
-        <small>Metal Décadence (Ouest Track), jan. 2025</small>
-      </div>
-    </div>
-
-    <aside class="card hero-media" aria-label="Photo live">
-      <img src="assets/hero.jpg" alt="Silent Injury — photo live" loading="eager" />
-      <div class="cap">📷 Photo live</div>
-    </aside>
-  </section>
-
-  <section id="bio" class="grid">
-    <div class="card">
-      <h2>Bio</h2>
-      <p>
-        Depuis 2021, Silent Injury porte un metalcore frontal : un socle rythmique brutal,
-        une lead qui découpe, une basse qui gonfle l’air, et une voix qui alterne entre cri
-        et chant. Le groupe défend un répertoire calibré pour la scène,
-        avec un son actuel et une exécution au scalpel.
-      </p>
-      <p class="muted">
-        Bombes dehors, paradis factice dedans : ça fissure de partout.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Proof points</h2>
-      <ul class="list">
-        <li><b>Album</b> : <span class="mono">Silent Injury</span> — sortie le 10/01/2025</li>
-        <li><b>Clip</b> : <span class="mono">Break The Mirror</span> (Official Music Video)</li>
-        <li><b>Radio</b> : Ouest Track / Metal Décadence (jan. 2025) ; diffusion nationale mentionnée dans le press book (Radio Nova)</li>
-        <li><b>Studio</b> : second opus en cours</li>
-      </ul>
-      <div class="section">
-        <h2>Line-up</h2>
-        <ul class="list">
-          <li>Arthur Delorme — rhythm guitar, voice</li>
-          <li>Thibault Vermot — bass</li>
-          <li>Charles Rousseau — lead guitar</li>
-          <li>XXXXX — drums</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="release" class="grid">
-    <div class="card">
-      <h2>Release</h2>
-      <div class="cover">
-        <img src="assets/album-cover.jpg" alt="Pochette — Silent Injury (album)" loading="lazy" />
-        <div>
-          <p><b>Silent Injury</b> — album éponyme (10 janvier 2025).</p>
-          <ul class="list">
-            <li>Prod / mix / master : Charles Rousseau</li>
-            <li>Lyrics : Thibault Vermot + Arthur Delorme</li>
-          </ul>
-
-          <div class="cta" style="margin-top:12px">
-            <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp</a>
-
-            <a class="btn streamer" href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Spotify">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M7.5 10.2c3.6-1.2 7.4-.9 10.7.7"></path>
-                <path d="M8.2 13c3-1 6.3-.8 9 .6"></path>
-                <path d="M9 15.7c2.2-.7 4.7-.6 6.7.4"></path>
-              </svg>
-              <span class="label">Spotify</span>
-            </a>
-
-            <a class="btn streamer" href="https://www.deezer.com/fr/album/692870631" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Deezer">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                <rect x="3" y="12" width="2" height="8" rx="1"></rect>
-                <rect x="7" y="10" width="2" height="10" rx="1"></rect>
-                <rect x="11" y="8" width="2" height="12" rx="1"></rect>
-                <rect x="15" y="10" width="2" height="10" rx="1"></rect>
-                <rect x="19" y="12" width="2" height="8" rx="1"></rect>
-              </svg>
-              <span class="label">Deezer</span>
-            </a>
-
-            <a class="btn streamer" href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener" aria-label="Écouter Silent Injury sur Apple Music">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                <path d="M16 3v11.2a3.2 3.2 0 1 1-2-3V6.2l-6 1.4V17.2a3.2 3.2 0 1 1-2-3V5.8L16 3z"></path>
-              </svg>
-              <span class="label">Apple Music</span>
-            </a>
+        <div class="feature">
+          <div class="feature__media">
+            <img src="assets/album-cover.jpg" alt="Pochette de l'album Silent Injury" loading="lazy" />
           </div>
 
           <article class="feature__copy">
             <p class="feature__eyebrow">Break The Mirror · official music video</p>
             <h3 class="feature__title">Silent Injury</h3>
-            <p></p>
+            <p>Le single et son clip ouvrent la page, comme chez les gros sites de groupes : un visuel fort, une accroche courte, puis l’action. Tu regardes, tu écoutes, tu passes au live.</p>
             <div class="feature__stats" aria-label="Formats disponibles">
               <span class="pill">YouTube</span>
               <span class="pill">Bandcamp</span>
@@ -880,43 +931,40 @@ img,svg,video{max-width:100%; height:auto}
         <div class="section-heading">
           <p class="section-kicker">Live</p>
           <h2 class="section-title">Tour</h2>
-          <p class="section-intro"></p>
+          <p class="section-intro">Le bloc live doit être visible très tôt. Même sans calendrier rempli, on comprend tout de suite que le groupe est bookable.</p>
         </div>
 
-      <div class="cta" style="margin-top:12px">
-        <a class="btn primary" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">▶️ Ouvrir sur YouTube</a>
+        <section class="tour-board" aria-label="Informations live et booking">
+          <div class="tour-board__grid">
+            <div class="tour-board__headline">
+              <p class="panel__eyebrow">Booking / live / interviews</p>
+              <h3 class="feature__title" style="font-size:clamp(1.8rem,4vw,3rem);">New dates in preparation</h3>
+              <p>Silent Injury prépare la suite. Pour les salles, assos, festivals et médias, le point d’entrée doit être net : un bandeau live, une adresse, aucun flottement.</p>
+            </div>
+
+            <ul class="tour-list">
+              <li>
+                <strong>2025 · France</strong>
+                <span>Nouvelles dates en préparation</span>
+                <a class="cta" href="mailto:silentinjuryofficiel@gmail.com?subject=Date%20live%20Silent%20Injury">Ask for availabilities</a>
+              </li>
+              <li>
+                <strong>Booking</strong>
+                <span>silentinjuryofficiel@gmail.com</span>
+                <a class="cta cta--primary" href="mailto:silentinjuryofficiel@gmail.com?subject=Booking%20Silent%20Injury">Contact now</a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Visualizer : Parallel Heights (assets/PARALLEL720.*) -->
-  <section id="visualizer" class="grid">
-    <div class="card">
-      <h2>Visualizer — Parallel Heights</h2>
-
-      <div class="video" aria-label="Visualizer Parallel Heights" style="margin-top:10px">
-        <video id="visualizer-video" controls playsinline preload="auto">
-          <source src="assets/PARALLEL720.mp4" type="video/mp4">
-          <source src="assets/PARALLEL720.webm" type="video/webm">
-          Votre navigateur ne supporte pas la vidéo HTML5.
-        </video>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Paroles / ambiance : Parallel Heights</h2>
-      <p class="muted">« Parallel Heights » incarne la voix d’un type retranché tout en haut de sa tour de verre et d'écrans, qui a remplacé les gens par des courbes. Dès la première phrase, il pose les choses, brutalement : « They’re 99 / I’m one of the first ». En bas, ça rampe dans la rue ; en haut, ça enchaîne les « confcall with lawyers » pour fabriquer une « parallel reality ». Le Nasdaq n’est plus un indice, c’est un dieu, et l’aveu tombe en même temps que le masque : « I don’t like people / Only numbers ». Quand arrive le bridge — « Send him to stars… / Aliens won’t thank us » — le vernis achève de se craqueler : on entend la haine, et derrière, la peur panique qu’un jour quelqu’un, tout en bas, trouve la porte.</p>
-    </div>
-  </section>
-
-  <section id="live">
-    <div class="card">
-      <h2>Live</h2>
-      <p class="muted">Dates</p>
-      <div class="dates" role="list">
-        <div class="date" role="listitem">
-          <div><b>27.09.2025</b> <span class="pill">Tremplin</span></div>
-          <span>Apocalypse Fest — Le Havre</span>
+    <section id="music" class="section scroll-anchor">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Platforms</p>
+          <h2 class="section-title">Music</h2>
+          <p class="section-intro">Des cartes simples, homogènes, sans bavardage. On clique et on écoute.</p>
         </div>
 
         <div class="cards-4">
@@ -956,7 +1004,7 @@ img,svg,video{max-width:100%; height:auto}
         <div class="section-heading">
           <p class="section-kicker">Watch</p>
           <h2 class="section-title">Videos</h2>
-          <p class="section-intro"></p>
+          <p class="section-intro">Une grande vidéo mise en avant, puis un second bloc plus brut pour le contenu embarqué du site.</p>
         </div>
 
         <div class="video-layout">
@@ -965,7 +1013,7 @@ img,svg,video{max-width:100%; height:auto}
             <div class="video-card__copy">
               <p class="video-card__eyebrow">Official video</p>
               <h3>Break The Mirror</h3>
-              <p></p>
+              <p>Le clip doit exister comme une destination évidente. Ici, il est traité comme l’objet principal du bloc.</p>
               <a class="cta cta--primary" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">Watch on YouTube</a>
             </div>
           </article>
@@ -978,7 +1026,7 @@ img,svg,video{max-width:100%; height:auto}
             <div class="video-card__copy">
               <p class="video-card__eyebrow">Embedded asset</p>
               <h3>Parallel</h3>
-              <p></p>
+              <p>Un second bloc vidéo, plus direct, pour exploiter les assets du repo sans casser la lisibilité générale.</p>
             </div>
           </article>
         </div>
@@ -990,7 +1038,7 @@ img,svg,video{max-width:100%; height:auto}
         <div class="section-heading">
           <p class="section-kicker">Gallery</p>
           <h2 class="section-title">Live frames</h2>
-          <p class="section-intro"></p>
+          <p class="section-intro">Trois images suffisent pour donner du relief à la page sans la transformer en portfolio bavard.</p>
         </div>
 
         <div class="gallery-grid">
@@ -998,7 +1046,7 @@ img,svg,video{max-width:100%; height:auto}
             <img src="assets/gallery/18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp" alt="Silent Injury sur scène, guitares en noir et blanc" loading="lazy" />
           </figure>
           <figure class="gallery-card">
-            <img src="assets/gallery/09-silent-injury-live-scene-public-coulisses-noir-blanc.webp" alt="Silent Injury sur scène vu depuis la salle" loading="lazy" />
+            <img src="assets/gallery/16-silent-injury-live-charles-rousseau-vincent-louvel-scene-noir-blanc.webp" alt="Charles Rousseau et Vincent Louvel sur scène en noir et blanc" loading="lazy" />
           </figure>
           <figure class="gallery-card">
             <img src="assets/gallery/11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp" alt="Bassiste de Silent Injury sous lumière bleue" loading="lazy" />
@@ -1012,13 +1060,13 @@ img,svg,video{max-width:100%; height:auto}
         <div class="section-heading">
           <p class="section-kicker">Band</p>
           <h2 class="section-title">About</h2>
-          <p class="section-intro"></p>
+          <p class="section-intro">Quelques lignes, des preuves visuelles, et des points d’entrée concrets. Pas une bio interminable.</p>
         </div>
 
         <div class="about-grid">
           <div class="about-copy">
-            <p>Silent Injury avance sur une ligne e haute tension qui crépite dangereusement : guitares serrées, voix qui tranche, mélodie sans concession.</p>
-            <p></p>
+            <p>Silent Injury avance sur une ligne claire : guitares serrées, voix qui tranche, mélodie tenue sans mollir. L’enjeu, ici, n’est pas de raconter toute l’histoire du groupe, mais de donner immédiatement sa texture et sa fonction : écouter, regarder, programmer.</p>
+            <p>La page reste compacte, verticale, pensée comme une landing page de groupe moderne : un hero massif, des sections courtes, des sorties visibles, un live lisible.</p>
 
             <div class="about-metrics" aria-label="Repères du groupe">
               <div class="metric">
@@ -1057,175 +1105,56 @@ img,svg,video{max-width:100%; height:auto}
         <div class="section-heading">
           <p class="section-kicker">Press / booking</p>
           <h2 class="section-title">EPK / Contact</h2>
-          <p class="section-intro"></p>
+          <p class="section-intro">Fin de page nette : documents utiles, contact direct, rien qui disperse.</p>
         </div>
 
-    <div class="card" id="photos">
-      <h2>Galerie</h2>
-      <p class="muted"></p>
-      <div class="gallery-toolbar" aria-label="Filtres galerie">
-  <button class="chip is-active" type="button" data-filter="all">Tout</button>
-  <button class="chip" type="button" data-filter="charles">Charles</button>
-  <button class="chip" type="button" data-filter="arthur">Arthur</button>
-  <button class="chip" type="button" data-filter="thibault">Thibault</button>
-  <button class="chip" type="button" data-filter="band">Groupe</button>
-</div>
-<div class="gallery-strip-wrap" aria-label="Galerie photos (défilante)">
-        <button class="strip-nav prev" type="button" aria-label="Photos précédentes">‹</button>
-        <div class="gallery-strip" id="galleryStrip" tabindex="0" aria-label="Bande de miniatures (défilement horizontal)"></div>
-        <button class="strip-nav next" type="button" aria-label="Photos suivantes">›</button>
-      </div>
-<noscript>
-  <div class="note">Les filtres et l’agrandissement nécessitent JavaScript. Les photos restent accessibles via ces liens :</div>
-  <ul class="noscript-links">
-    <li><a href="assets/gallery/01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp">Thibault Vermot, Vincent Louvel — basse / batterie — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/16-silent-injury-live-charles-rousseau-vincent-louvel-scene-noir-blanc.webp">Charles Rousseau, Vincent Louvel — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp">Charles Rousseau — guitare / solo — live</a></li>
-<li><a href="assets/gallery/04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp">Arthur Delorme — guitare / chant — portrait (N&amp;B)</a></li>
-<li><a href="assets/gallery/05-silent-injury-live-groupe-complet-vincent-louvel-batterie-vue-arriere-noir-blanc.webp">Vincent Louvel — batterie — vue arrière (N&amp;B)</a></li>
-<li><a href="assets/gallery/06-silent-injury-live-vincent-louvel-batteur-performance-noir-blanc.webp">Vincent Louvel — batterie — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/07-silent-injury-live-arthur-delorme-chant-guitare-lumiere-rouge.webp">Arthur Delorme — guitare / chant — live</a></li>
-<li><a href="assets/gallery/08-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-plan-large-noir-blanc.webp">Thibault Vermot, Vincent Louvel — basse / batterie — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/09-silent-injury-live-scene-public-coulisses-noir-blanc.webp">Silent Injury — avec le public (N&amp;B)</a></li>
-<li><a href="assets/gallery/10-silent-injury-live-arthur-delorme-chant-cri-profil-lumiere-bleue.webp">Arthur Delorme — chant — live</a></li>
-<li><a href="assets/gallery/11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp">Thibault Vermot — basse — live</a></li>
-<li><a href="assets/gallery/12-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-ombre.webp">Arthur Delorme — guitare — portrait (N&amp;B)</a></li>
-<li><a href="assets/gallery/13-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-yeux-clos.webp">Arthur Delorme — guitare — portrait (N&amp;B)</a></li>
-<li><a href="assets/gallery/14-silent-injury-live-charles-rousseau-guitariste-soliste-lumiere-bleue.webp">Charles Rousseau — guitare / solo — live</a></li>
-<li><a href="assets/gallery/15-silent-injury-live-arthur-delorme-thibault-vermot-vincent-louvel-groupe-noir-blanc.webp">Arthur Delorme, Thibault Vermot, Vincent Louvel — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/02-silent-injury-live-thibault-vermot-bassiste-portrait-noir-blanc.webp">Thibault Vermot — basse — portrait (N&amp;B)</a></li>
-<li><a href="assets/gallery/17-silent-injury-live-thibault-vermot-arthur-delorme-vincent-louvel-noir-blanc.webp">Arthur Delorme, Thibault Vermot, Vincent Louvel — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp">Arthur Delorme, Charles Rousseau — guitare — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/silent-injury-arthur-delorme-chant-charles-rousseau-guitare-live-noir-blanc-01.webp">Arthur Delorme, Charles Rousseau — guitare / chant — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/silent-injury-arthur-delorme-chant-scene-groupe-live-noir-blanc-02.webp">Arthur Delorme — chant — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/silent-injury-arthur-delorme-charles-rousseau-duo-guitares-live-01.webp">Arthur Delorme, Charles Rousseau — guitare — live</a></li>
-<li><a href="assets/gallery/silent-injury-arthur-delorme-guitare-live-portrait-vertical-01.webp">Arthur Delorme — guitare — portrait</a></li>
-<li><a href="assets/gallery/silent-injury-arthur-delorme-guitariste-chanteur-live-concert-couleur-02.webp">Arthur Delorme — guitare / chant — live</a></li>
-<li><a href="assets/gallery/silent-injury-arthur-delorme-vocaliste-guitariste-live-concert-noir-blanc-01.webp">Arthur Delorme — guitare — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/silent-injury-charles-rousseau-guitariste-soliste-live-concert-couleur-01.webp">Charles Rousseau — guitare / solo — live</a></li>
-<li><a href="assets/gallery/silent-injury-charles-rousseau-guitariste-soliste-live-concert-noir-blanc-01.webp">Charles Rousseau — guitare / solo — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/silent-injury-groupe-complet-live-concert-metalcore-scene-01.webp">Silent Injury — live</a></li>
-<li><a href="assets/gallery/silent-injury-photo-groupe-public-fin-de-concert-01.webp">Silent Injury — avec le public</a></li>
-<li><a href="assets/gallery/silent-injury-thibault-vermot-basse-arthur-delorme-guitare-live-couleur-01.webp">Arthur Delorme, Thibault Vermot — basse / guitare — live</a></li>
-<li><a href="assets/gallery/silent-injury-thibault-vermot-bassiste-live-concert-couleur-01.webp">Thibault Vermot — basse — live</a></li>
-<li><a href="assets/gallery/silent-injury-thibault-vermot-bassiste-live-concert-noir-blanc-01.webp">Thibault Vermot — basse — live (N&amp;B)</a></li>
-<li><a href="assets/gallery/silent-injury-thibault-vermot-bassiste-micro-live-noir-blanc-02.webp">Thibault Vermot — basse — live (N&amp;B)</a></li>
-  </ul>
-</noscript>
-    </div>
-  </section>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Press & Tech</h3>
+            <p>Presskit, tech rider, photos HD : tout ce qu’il faut pour faire circuler le groupe proprement.</p>
+            <div class="contact-actions">
+              <a class="cta" href="assets/presskit.pdf" target="_blank" rel="noopener">Presskit PDF</a>
+              <a class="cta" href="assets/techrider.pdf" target="_blank" rel="noopener">Tech rider PDF</a>
+              <a class="cta" href="downloads/silent-injury-photos-hd.zip" download>HD photos</a>
+            </div>
+          </article>
 
-  <section id="contact" class="grid">
-    <div class="card">
-      <h2>Contact</h2>
-      <p><b>Email</b> : <a href="mailto:silentinjuryofficiel@gmail.com">silentinjuryofficiel@gmail.com</a></p>
-      <p class="muted">Téléphone (booking/manager) : <span class="mono">Arthur Delorme / Thibault Vermot</span></p>
-      <p class="muted">Ville / base : <span class="mono">Elbeuf / Rouen</span></p>
-
-      <div class="section">
-        <h2>Downloads</h2>
-        <ul class="list">
-          <li><a href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book (PDF)</a></li>
-          <li><a href="assets/techrider.pdf" target="_blank" rel="noopener">🎚️ Tech rider (PDF)</a></li>
-          <li><a href="downloads/silent-injury-photos-hd.zip" download>📷 Photos HD (ZIP)</a></li>
-        </ul>
+          <article class="contact-card">
+            <h3>Booking</h3>
+            <p>Concerts, interviews, partenariats : un seul point de contact, visible sans fouiller.</p>
+            <a class="cta cta--primary contact-email" href="mailto:silentinjuryofficiel@gmail.com?subject=Booking%20Silent%20Injury">silentinjuryofficiel@gmail.com</a>
+            <div class="footer__social" aria-label="Réseaux sociaux du groupe">
+              <a href="https://www.instagram.com/silentinjury_band/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.facebook.com/profile.php?id=61552999371364" target="_blank" rel="noopener">Facebook</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-      <div class="cta" style="margin-top:12px">
-        <a class="btn primary" href="mailto:silentinjuryofficiel@gmail.com?subject=Contacter%20Silent">✉️ Contacter</a>
-        <a class="btn" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">🎧 Bandcamp</a>
-        <a class="btn" href="https://www.instagram.com/silentinjury_band/" target="_blank" rel="noopener"><svg class="icon-logo" aria-hidden="true"><use href="#icon-instagram"></use></svg><span>Instagram</span></a>
-        <a class="btn" href="https://www.facebook.com/profile.php?id=61552999371364" target="_blank" rel="noopener"><svg class="icon-logo" aria-hidden="true"><use href="#icon-facebook"></use></svg><span>Facebook</span></a>
+  <footer class="footer">
+    <div class="container footer__row">
+      <small>© Silent Injury</small>
+      <div class="footer__social" aria-label="Navigation secondaire">
+        <a href="#release">Release</a>
+        <a href="#tour">Tour</a>
+        <a href="#music">Music</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
 
-    <div class="card">
-      <h2>Checklist (pour prog)</h2>
-      <ul class="list">
-        <li>Press book : <a href="assets/presskit.pdf" target="_blank" rel="noopener">assets/presskit.pdf</a></li>
-        <li>Clip : <a href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">YouTube</a></li>
-        <li>Bandcamp : <a href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">silentinjury.bandcamp.com</a></li>
-        <li>Instagram : <a href="https://www.instagram.com/silentinjury_band/" target="_blank" rel="noopener">@silentinjury_band</a></li>
-        <li>Facebook : <a href="https://www.facebook.com/profile.php?id=61552999371364" target="_blank" rel="noopener">Silent Injury</a></li>
-        <li>
-          Streaming :
-          <a href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener">Spotify</a>
-          • <a href="https://www.deezer.com/fr/album/692870631" target="_blank" rel="noopener">Deezer</a>
-          • <a href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener">Apple Music</a>
-        </li>
-        <li>Tech rider : <a href="assets/techrider.pdf" target="_blank" rel="noopener">assets/techrider.pdf</a></li>
-        <li>Title track (audio) : <span class="mono">assets/silentinjury.mp3</span></li>
-        <li>Visualizer (video) : <span class="mono">assets/PARALLEL720.mp4</span></li>
-      </ul>
-      <p class="muted" style="margin-top:10px">
-        Mentions : Asso La Pelle A Breakdown • Groupe enregistré SACEM • Set 40–90 min.
-      </p>
-    </div>
-  </section>
+  <script>
+    const header = document.getElementById('siteHeader');
+    const menuButton = document.getElementById('menuButton');
+    const menuClose = document.getElementById('menuClose');
+    const menuOverlay = document.getElementById('menuOverlay');
 
-  <footer>
-    <span>© <span id="year"></span> Silent Injury</span>
-    <span>Asso La Pelle A Breakdown • SACEM</span>
-  </footer>
-</main>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-<!-- Mini-player logic -->
-<script>
-  (function(){
-    const audio = document.getElementById("epk-audio");
-    const visualizerVideo = document.getElementById("visualizer-video");
-    const btn = document.getElementById("player-toggle");
-    const bar = document.querySelector(".player-bar");
-    const fill = document.getElementById("player-fill");
-    const time = document.getElementById("player-time");
-    if(!audio || !btn || !bar || !fill || !time) return;
-
-    audio.volume = 0.75;
-
-    // Warm up media to reduce first-play latency on the visualizer and audio track
-    const warmupMedia = () => {
-      try { audio.load(); } catch(_) {}
-      if(visualizerVideo){
-        visualizerVideo.preload = "auto";
-        try { visualizerVideo.load(); } catch(_) {}
-      }
-    };
-
-    if(document.readyState === "complete") warmupMedia();
-    else window.addEventListener("load", warmupMedia, { once:true });
-
-    const fmt = (s) => {
-      if(!isFinite(s)) return "0:00";
-      const m = Math.floor(s / 60);
-      const r = Math.floor(s % 60).toString().padStart(2,"0");
-      return `${m}:${r}`;
-    };
-
-    function setUI(){
-      const playing = !audio.paused;
-      btn.textContent = playing ? "⏸" : "▶️";
-      btn.setAttribute("aria-pressed", String(playing));
-
-      const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
-      fill.style.width = `${pct}%`;
-      bar.setAttribute("aria-valuenow", String(Math.round(pct)));
-      time.textContent = fmt(audio.currentTime);
+    function syncHeader() {
+      header.classList.toggle('is-scrolled', window.scrollY > 24);
     }
-
-    btn.addEventListener("click", async () => {
-      try{
-        if(audio.paused) await audio.play();
-        else audio.pause();
-      }catch(e){}
-      setUI();
-    });
 
     function openMenu() {
       menuOverlay.classList.add('is-open');
@@ -1250,48 +1179,7 @@ img,svg,video{max-width:100%; height:auto}
       }
     });
 
-    audio.addEventListener("timeupdate", setUI);
-    audio.addEventListener("loadedmetadata", setUI);
-    audio.addEventListener("ended", setUI);
-
-    setUI();
-  })();
-</script>
-
-<!-- Galerie — bonus pro -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <div class="lightbox__inner" role="dialog" aria-modal="true" aria-label="Agrandissement photo">
-    <button class="lightbox__close" type="button" aria-label="Fermer">×</button>
-    <button class="lightbox__prev" type="button" aria-label="Photo précédente">‹</button>
-    <img class="lightbox__img" id="lightboxImg" alt="" loading="eager" decoding="async">
-    <button class="lightbox__next" type="button" aria-label="Photo suivante">›</button>
-    <div class="lightbox__caption" id="lightboxCaption"></div>
-  </div>
-</div>
-<script>
-(() => {
-  const PHOTOS = [{"file": "01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp", "src": "assets/gallery/01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp", "alt": "Silent Injury en concert — Thibault Vermot, Vincent Louvel (basse, batterie), photo n&b", "caption": "Thibault Vermot, Vincent Louvel — basse / batterie — live (N&B)", "tags": ["thibault", "vincent", "band"]}, {"file": "16-silent-injury-live-charles-rousseau-vincent-louvel-scene-noir-blanc.webp", "src": "assets/gallery/16-silent-injury-live-charles-rousseau-vincent-louvel-scene-noir-blanc.webp", "alt": "Silent Injury en concert — Charles Rousseau, Vincent Louvel, photo n&b", "caption": "Charles Rousseau, Vincent Louvel — live (N&B)", "tags": ["charles", "vincent", "band"]}, {"file": "03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp", "src": "assets/gallery/03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo couleur", "caption": "Charles Rousseau — guitare / solo — live", "tags": ["charles"]}, {"file": "04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp", "src": "assets/gallery/04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare, chant), photo n&b", "caption": "Arthur Delorme — guitare / chant — portrait (N&B)", "tags": ["arthur"]}, {"file": "05-silent-injury-live-groupe-complet-vincent-louvel-batterie-vue-arriere-noir-blanc.webp", "src": "assets/gallery/05-silent-injury-live-groupe-complet-vincent-louvel-batterie-vue-arriere-noir-blanc.webp", "alt": "Silent Injury en concert — Vincent Louvel (batterie), photo n&b", "caption": "Vincent Louvel — batterie — vue arrière (N&B)", "tags": ["vincent", "band"]}, {"file": "06-silent-injury-live-vincent-louvel-batteur-performance-noir-blanc.webp", "src": "assets/gallery/06-silent-injury-live-vincent-louvel-batteur-performance-noir-blanc.webp", "alt": "Silent Injury en concert — Vincent Louvel (batterie), photo n&b", "caption": "Vincent Louvel — batterie — live (N&B)", "tags": ["vincent", "band"]}, {"file": "07-silent-injury-live-arthur-delorme-chant-guitare-lumiere-rouge.webp", "src": "assets/gallery/07-silent-injury-live-arthur-delorme-chant-guitare-lumiere-rouge.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare, chant), photo couleur", "caption": "Arthur Delorme — guitare / chant — live", "tags": ["arthur"]}, {"file": "08-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-plan-large-noir-blanc.webp", "src": "assets/gallery/08-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-plan-large-noir-blanc.webp", "alt": "Silent Injury en concert — Thibault Vermot, Vincent Louvel (basse, batterie), photo n&b", "caption": "Thibault Vermot, Vincent Louvel — basse / batterie — live (N&B)", "tags": ["thibault", "vincent", "band"]}, {"file": "09-silent-injury-live-scene-public-coulisses-noir-blanc.webp", "src": "assets/gallery/09-silent-injury-live-scene-public-coulisses-noir-blanc.webp", "alt": "Silent Injury en concert — Silent Injury, photo n&b", "caption": "Silent Injury — avec le public (N&B)", "tags": ["band"]}, {"file": "10-silent-injury-live-arthur-delorme-chant-cri-profil-lumiere-bleue.webp", "src": "assets/gallery/10-silent-injury-live-arthur-delorme-chant-cri-profil-lumiere-bleue.webp", "alt": "Silent Injury en concert — Arthur Delorme (chant), photo couleur", "caption": "Arthur Delorme — chant — live", "tags": ["arthur"]}, {"file": "11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp", "src": "assets/gallery/11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo couleur", "caption": "Thibault Vermot — basse — live", "tags": ["thibault"]}, {"file": "12-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-ombre.webp", "src": "assets/gallery/12-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-ombre.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo n&b", "caption": "Arthur Delorme — guitare — portrait (N&B)", "tags": ["arthur"]}, {"file": "13-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-yeux-clos.webp", "src": "assets/gallery/13-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-yeux-clos.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo n&b", "caption": "Arthur Delorme — guitare — portrait (N&B)", "tags": ["arthur"]}, {"file": "14-silent-injury-live-charles-rousseau-guitariste-soliste-lumiere-bleue.webp", "src": "assets/gallery/14-silent-injury-live-charles-rousseau-guitariste-soliste-lumiere-bleue.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo couleur", "caption": "Charles Rousseau — guitare / solo — live", "tags": ["charles"]}, {"file": "15-silent-injury-live-arthur-delorme-thibault-vermot-vincent-louvel-groupe-noir-blanc.webp", "src": "assets/gallery/15-silent-injury-live-arthur-delorme-thibault-vermot-vincent-louvel-groupe-noir-blanc.webp", "alt": "Silent Injury en concert — Arthur Delorme, Thibault Vermot, Vincent Louvel, photo n&b", "caption": "Arthur Delorme, Thibault Vermot, Vincent Louvel — live (N&B)", "tags": ["arthur", "thibault", "vincent", "band"]}, {"file": "02-silent-injury-live-thibault-vermot-bassiste-portrait-noir-blanc.webp", "src": "assets/gallery/02-silent-injury-live-thibault-vermot-bassiste-portrait-noir-blanc.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo n&b", "caption": "Thibault Vermot — basse — portrait (N&B)", "tags": ["thibault"]}, {"file": "17-silent-injury-live-thibault-vermot-arthur-delorme-vincent-louvel-noir-blanc.webp", "src": "assets/gallery/17-silent-injury-live-thibault-vermot-arthur-delorme-vincent-louvel-noir-blanc.webp", "alt": "Silent Injury en concert — Arthur Delorme, Thibault Vermot, Vincent Louvel, photo n&b", "caption": "Arthur Delorme, Thibault Vermot, Vincent Louvel — live (N&B)", "tags": ["arthur", "thibault", "vincent", "band"]}, {"file": "18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp", "src": "assets/gallery/18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp", "alt": "Silent Injury en concert — Arthur Delorme, Charles Rousseau (guitare), photo n&b", "caption": "Arthur Delorme, Charles Rousseau — guitare — live (N&B)", "tags": ["arthur", "charles"]}, {"file": "silent-injury-arthur-delorme-chant-charles-rousseau-guitare-live-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-chant-charles-rousseau-guitare-live-noir-blanc-01.webp", "alt": "Silent Injury en concert — Arthur Delorme, Charles Rousseau (guitare, chant), photo n&b", "caption": "Arthur Delorme, Charles Rousseau — guitare / chant — live (N&B)", "tags": ["arthur", "charles"]}, {"file": "silent-injury-arthur-delorme-chant-scene-groupe-live-noir-blanc-02.webp", "src": "assets/gallery/silent-injury-arthur-delorme-chant-scene-groupe-live-noir-blanc-02.webp", "alt": "Silent Injury en concert — Arthur Delorme (chant), photo n&b", "caption": "Arthur Delorme — chant — live (N&B)", "tags": ["arthur", "band"]}, {"file": "silent-injury-arthur-delorme-charles-rousseau-duo-guitares-live-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-charles-rousseau-duo-guitares-live-01.webp", "alt": "Silent Injury en concert — Arthur Delorme, Charles Rousseau (guitare), photo couleur", "caption": "Arthur Delorme, Charles Rousseau — guitare — live", "tags": ["arthur", "charles"]}, {"file": "silent-injury-arthur-delorme-guitare-live-portrait-vertical-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-guitare-live-portrait-vertical-01.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo couleur", "caption": "Arthur Delorme — guitare — portrait", "tags": ["arthur"]}, {"file": "silent-injury-arthur-delorme-guitariste-chanteur-live-concert-couleur-02.webp", "src": "assets/gallery/silent-injury-arthur-delorme-guitariste-chanteur-live-concert-couleur-02.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare, chant), photo couleur", "caption": "Arthur Delorme — guitare / chant — live", "tags": ["arthur"]}, {"file": "silent-injury-arthur-delorme-vocaliste-guitariste-live-concert-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-arthur-delorme-vocaliste-guitariste-live-concert-noir-blanc-01.webp", "alt": "Silent Injury en concert — Arthur Delorme (guitare), photo n&b", "caption": "Arthur Delorme — guitare — live (N&B)", "tags": ["arthur"]}, {"file": "silent-injury-charles-rousseau-guitariste-soliste-live-concert-couleur-01.webp", "src": "assets/gallery/silent-injury-charles-rousseau-guitariste-soliste-live-concert-couleur-01.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo couleur", "caption": "Charles Rousseau — guitare / solo — live", "tags": ["charles"]}, {"file": "silent-injury-charles-rousseau-guitariste-soliste-live-concert-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-charles-rousseau-guitariste-soliste-live-concert-noir-blanc-01.webp", "alt": "Silent Injury en concert — Charles Rousseau (guitare, solo), photo n&b", "caption": "Charles Rousseau — guitare / solo — live (N&B)", "tags": ["charles"]}, {"file": "silent-injury-groupe-complet-live-concert-metalcore-scene-01.webp", "src": "assets/gallery/silent-injury-groupe-complet-live-concert-metalcore-scene-01.webp", "alt": "Silent Injury en concert — Silent Injury, photo couleur", "caption": "Silent Injury — live", "tags": ["band"]}, {"file": "silent-injury-photo-groupe-public-fin-de-concert-01.webp", "src": "assets/gallery/silent-injury-photo-groupe-public-fin-de-concert-01.webp", "alt": "Silent Injury en concert — Silent Injury, photo couleur", "caption": "Silent Injury — avec le public", "tags": ["band"]}, {"file": "silent-injury-thibault-vermot-basse-arthur-delorme-guitare-live-couleur-01.webp", "src": "assets/gallery/silent-injury-thibault-vermot-basse-arthur-delorme-guitare-live-couleur-01.webp", "alt": "Silent Injury en concert — Arthur Delorme, Thibault Vermot (basse, guitare), photo couleur", "caption": "Arthur Delorme, Thibault Vermot — basse / guitare — live", "tags": ["arthur", "thibault"]}, {"file": "silent-injury-thibault-vermot-bassiste-live-concert-couleur-01.webp", "src": "assets/gallery/silent-injury-thibault-vermot-bassiste-live-concert-couleur-01.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo couleur", "caption": "Thibault Vermot — basse — live", "tags": ["thibault"]}, {"file": "silent-injury-thibault-vermot-bassiste-live-concert-noir-blanc-01.webp", "src": "assets/gallery/silent-injury-thibault-vermot-bassiste-live-concert-noir-blanc-01.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo n&b", "caption": "Thibault Vermot — basse — live (N&B)", "tags": ["thibault"]}, {"file": "silent-injury-thibault-vermot-bassiste-micro-live-noir-blanc-02.webp", "src": "assets/gallery/silent-injury-thibault-vermot-bassiste-micro-live-noir-blanc-02.webp", "alt": "Silent Injury en concert — Thibault Vermot (basse), photo n&b", "caption": "Thibault Vermot — basse — live (N&B)", "tags": ["thibault"]}];
-
-  const strip = document.getElementById('galleryStrip');
-  const stripPrev = document.querySelector('.strip-nav.prev');
-  const stripNext = document.querySelector('.strip-nav.next');
-  const toolbar = document.querySelector('.gallery-toolbar');
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightboxImg');
-  const lbCap = document.getElementById('lightboxCaption');
-  const btnClose = lightbox.querySelector('.lightbox__close');
-  const btnPrev = lightbox.querySelector('.lightbox__prev');
-  const btnNext = lightbox.querySelector('.lightbox__next');
-
-  let filter = 'all';
-  let currentList = PHOTOS.slice();
-  let currentIndex = 0;
-
-  function applyFilter() {
-    currentList = (filter === 'all')
-      ? PHOTOS.slice()
-      : PHOTOS.filter(p => (p.tags || []).includes(filter));
-  }
+    menuClose.addEventListener('click', closeMenu);
 
     menuOverlay.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', closeMenu);
