@@ -45,9 +45,7 @@
         "@type": "MusicGroup",
         "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#musicgroup",
         "name": "Silent Injury",
-        "genre": [
-          "Metalcore"
-        ],
+        "genre": ["Metalcore"],
         "url": "https://thvermot-wq.github.io/SILENT-MINISITE/",
         "image": "https://thvermot-wq.github.io/SILENT-MINISITE/assets/og-cover.jpg",
         "sameAs": [
@@ -58,47 +56,6 @@
           "https://www.facebook.com/profile.php?id=61552999371364"
         ],
         "description": "Metalcore (FR). EPK / Booking : liens, live, presse, tech, contact."
-      },
-      {
-        "@type": "MusicAlbum",
-        "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#album",
-        "name": "Silent Injury",
-        "byArtist": {
-          "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#musicgroup"
-        },
-        "datePublished": "2025-01-10",
-        "url": "https://silentinjury.bandcamp.com/album/silent-injury",
-        "sameAs": [
-          "https://music.apple.com/fr/album/silent-injury/1789094863",
-          "https://www.deezer.com/fr/album/692870631",
-          "https://silentinjury.bandcamp.com/album/silent-injury"
-        ]
-      },
-      {
-        "@type": "MusicRecording",
-        "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#track-break-the-mirror",
-        "name": "Break The Mirror",
-        "byArtist": {
-          "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#musicgroup"
-        },
-        "inAlbum": {
-          "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#album"
-        },
-        "url": "https://www.youtube.com/watch?v=wf1ajH-h7EQ"
-      },
-      {
-        "@type": "MusicVideoObject",
-        "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#video-break-the-mirror",
-        "name": "Break The Mirror (Official Video)",
-        "byArtist": {
-          "@id": "https://thvermot-wq.github.io/SILENT-MINISITE/#musicgroup"
-        },
-        "thumbnailUrl": [
-          "https://thvermot-wq.github.io/SILENT-MINISITE/assets/og-cover.jpg"
-        ],
-        "uploadDate": "2025-01-10",
-        "embedUrl": "https://www.youtube.com/embed/wf1ajH-h7EQ",
-        "url": "https://www.youtube.com/watch?v=wf1ajH-h7EQ"
       }
     ]
   }
@@ -110,41 +67,249 @@
 <link rel="preload" href="assets/PARALLEL720.mp4" as="video" type="video/mp4" />
 
   <style>
-    :root{
-  --bg:#0b0c10;
-  --panel:#10131a;
-  --text:#e9eef5;
-  --muted:#aab4c3;
-  --line:rgba(255,255,255,.10);
-  --accent:#e53935;
-  --accent2:#7c4dff;
-  --radius:18px;
-  --max:1120px;
-
-  /* scale (spacings) */
-  --s1:.25rem; --s2:.5rem; --s3:.75rem; --s4:1rem; --s5:1.5rem; --s6:2rem; --s7:3rem;
-
-  /* fonts */
-  --font-sans:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-  --font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font:16px/1.55 var(--font-sans);
-      color:var(--text);
-      background:
-        radial-gradient(900px 380px at 20% 10%, rgba(229,57,53,.14), transparent 60%),
-        radial-gradient(900px 520px at 85% 0%, rgba(124,77,255,.12), transparent 55%),
-        linear-gradient(180deg, #07080b, var(--bg));
+    /* Ajoute manuellement le fichier assets/fonts/Omicron.ttf dans le repo pour activer le titre du hero. */
+    @font-face {
+      font-family: "Omicron";
+      src: local("Omicron"), url("assets/fonts/Omicron.ttf") format("truetype");
+      font-display: swap;
     }
 
-    /* --- Watermark logo (sous-calque, derrière tout) --- */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
+    :root {
+      --bg: #060608;
+      --bg-deep: #0b0b0f;
+      --panel: #111217;
+      --panel-soft: #181a21;
+      --line: rgba(255,255,255,.12);
+      --line-strong: rgba(255,255,255,.2);
+      --text: #f5f7fb;
+      --muted: #b6bcc9;
+      --muted-2: #8d94a3;
+      --accent: #cf1028;
+      --accent-soft: rgba(207,16,40,.18);
+      --max: 1240px;
+      --radius: 22px;
+      --shadow: 0 24px 70px rgba(0,0,0,.38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(207,16,40,.08), transparent 28%),
+        linear-gradient(180deg, #050507 0%, #0a0a0e 60%, #050507 100%);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
+
+    body.menu-open { overflow: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    :focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      border-bottom: 1px solid transparent;
+      transition: background-color .25s ease, border-color .25s ease, backdrop-filter .25s ease;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(5,5,7,.84);
+      border-color: var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .site-header__inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .85rem;
+      text-decoration: none;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      opacity: .92;
+      filter: drop-shadow(0 0 14px rgba(255,255,255,.12));
+    }
+
+    .brand__meta {
+      display: grid;
+      gap: .08rem;
+    }
+
+    .brand__title {
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand__sub {
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+
+    .lang-link,
+    .menu-button {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      min-height: 44px;
+      padding: 0 .95rem;
+      border-radius: 999px;
+      text-decoration: none;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .74rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      cursor: pointer;
+    }
+
+    .menu-button__bars {
+      display: inline-grid;
+      gap: 4px;
+    }
+
+    .menu-button__bars span {
+      width: 16px;
+      height: 1px;
+      background: currentColor;
+      display: block;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background:
+        linear-gradient(180deg, rgba(7,7,9,.96), rgba(7,7,9,.985)),
+        url('assets/gallery/09-silent-injury-live-scene-public-coulisses-noir-blanc.webp') center/cover no-repeat;
+      display: grid;
+      align-items: end;
+      padding: clamp(6rem, 8vw, 7.5rem) 1.25rem 2rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .24s ease, visibility .24s ease;
+    }
+
+    .menu-overlay::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.62), rgba(0,0,0,.9));
+    }
+
+    .menu-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .menu-overlay__inner {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 1240px);
+      margin-inline: auto;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .menu-overlay__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .menu-label {
+      font-size: .74rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .menu-close {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .menu-nav {
+      display: grid;
+      gap: .35rem;
+      padding-bottom: 1rem;
+    }
+
+    .menu-nav a {
+      text-decoration: none;
+      font-size: clamp(1.8rem, 4vw, 3.4rem);
+      font-weight: 800;
+      line-height: .98;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      padding: .3rem 0;
+      width: fit-content;
+    }
+
+    .menu-nav a:hover { color: #ffffff; }
+
+    .menu-overlay__footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 1rem;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      overflow: clip;
       background:
         url("assets/logo-watermark.png")
         center / min(900px, 78vw) no-repeat;
@@ -518,18 +683,24 @@ img,svg,video{max-width:100%; height:auto}
         <span>EPK / Booking</span>
       </div>
     </div>
+  </header>
 
-    <div class="nav-right">
-      <nav class="main-nav" aria-label="Navigation">
-        <a href="#bio">Bio</a>
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-overlay__inner">
+      <div class="menu-overlay__top">
+        <span class="menu-label">Silent Injury</span>
+        <button class="menu-close" id="menuClose" type="button" aria-label="Fermer le menu">✕</button>
+      </div>
+
+      <nav class="menu-nav" aria-label="Navigation principale">
+        <a href="#top">Home</a>
         <a href="#release">Release</a>
-        <a href="#video">Clip</a>
-        <a href="#visualizer">Visualizer</a>
-        <a href="#live">Live</a>
-        <a href="#press">Presse</a>
-        <a href="#tech">Tech</a>
-        <a href="#photos">Galerie</a>
-        <a href="#contact">Contact</a>
+        <a href="#tour">Tour</a>
+        <a href="#music">Music</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+        <a href="#contact">EPK / Contact</a>
+        <a href="/SILENT-MINISITE/en/">English</a>
       </nav>
 
       <div class="social-nav" aria-label="Réseaux sociaux">
@@ -548,35 +719,36 @@ img,svg,video{max-width:100%; height:auto}
       </div>
     </div>
   </div>
-</header>
 
-<main class="wrap">
-
-  <section class="hero" aria-label="Présentation">
-    <div class="card">
-      <h1 class="hero-title">
-        <span class="hero-name">SILENT INJURY</span>
-        <span class="hero-genre">Metalcore</span>
-        <span class="hero-tag">Frontal. Mélodique. Indiscutable en live.</span>
-      </h1>
-
-      <p class="tagline">
-        Metalcore 2000s : riffs acérés, alternance scream/clean, set taillé pour la scène.
-      </p>
-
-      <div class="player-wrap" aria-label="Title track player">
-        <p class="player-label">
-          <b>Title Track:</b>
-          <span>Silent Injury</span>
-        </p>
-        <div class="player" aria-label="Lecteur audio Silent Injury">
-          <button class="player-btn" id="player-toggle" type="button" aria-pressed="false" title="Lire / pause">▶️</button>
-          <div class="player-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" title="Avancer / reculer">
-            <div class="player-fill" id="player-fill"></div>
+  <main id="top">
+    <section class="hero scroll-anchor" aria-label="Hero">
+      <img class="hero__watermark" src="assets/logo-watermark.png" alt="" aria-hidden="true" />
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Latest video · Break The Mirror</p>
+          <h1 class="hero__title">silent injury</h1>
+          <p class="hero__dek">Metalcore frontal et mélodique. Nouveau cycle de sorties. Nouveau set live.</p>
+          <div class="hero__meta" aria-label="Informations rapides">
+            <span>France</span>
+            <span>Metalcore</span>
+            <span>Booking open</span>
           </div>
-          <div class="player-time" id="player-time">0:00</div>
+          <div class="cta-row">
+            <a class="cta cta--primary" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">Watch video</a>
+            <a class="cta cta--ghost" href="#tour">View live section</a>
+            <a class="cta" href="mailto:silentinjuryofficiel@gmail.com?subject=Booking%20Silent%20Injury">Book the band</a>
+          </div>
         </div>
       </div>
+    </section>
+
+    <section id="release" class="section scroll-anchor">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Featured</p>
+          <h2 class="section-title">Latest release</h2>
+          <p class="section-intro"></p>
+        </div>
 
       <div class="cta">
         <a class="btn primary" href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book (PDF)</a>
@@ -685,21 +857,31 @@ img,svg,video{max-width:100%; height:auto}
             </a>
           </div>
 
+          <article class="feature__copy">
+            <p class="feature__eyebrow">Break The Mirror · official music video</p>
+            <h3 class="feature__title">Silent Injury</h3>
+            <p></p>
+            <div class="feature__stats" aria-label="Formats disponibles">
+              <span class="pill">YouTube</span>
+              <span class="pill">Bandcamp</span>
+              <span class="pill">Streaming</span>
+            </div>
+            <div class="cta-row">
+              <a class="cta cta--primary" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">Open YouTube</a>
+              <a class="cta" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">Listen now</a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card" id="video">
-      <h2>Clip — Break The Mirror</h2>
-
-      <div class="video" aria-label="Lecteur vidéo YouTube (Break The Mirror)" style="margin-top:10px">
-        <iframe
-          src="https://www.youtube.com/embed/wf1ajH-h7EQ"
-          title="Silent Injury — Break The Mirror (Official Music Video)"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
+    <section id="tour" class="section scroll-anchor">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Live</p>
+          <h2 class="section-title">Tour</h2>
+          <p class="section-intro"></p>
+        </div>
 
       <div class="cta" style="margin-top:12px">
         <a class="btn primary" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">▶️ Ouvrir sur YouTube</a>
@@ -736,61 +918,147 @@ img,svg,video{max-width:100%; height:auto}
           <div><b>27.09.2025</b> <span class="pill">Tremplin</span></div>
           <span>Apocalypse Fest — Le Havre</span>
         </div>
-        <div class="date" role="listitem">
-          <div><b>15.02.2025</b></div>
-          <span>Rouen</span>
-        </div>
-        <div class="date" role="listitem">
-          <div><b>25.01.2025</b></div>
-          <span>Caen</span>
-        </div>
-        <div class="date" role="listitem">
-          <div><b>07.09.2024</b></div>
-          <span>Le Havre</span>
-        </div>
-        <div class="date" role="listitem">
-          <div><b>22.06.2024</b></div>
-          <span>Moulin-Amour</span>
-        </div>
-        <div class="date" role="listitem">
-          <div><b>08.12.2023</b></div>
-          <span>Elbeuf-sur-Seine</span>
+
+        <div class="cards-4">
+          <article class="panel">
+            <p class="panel__eyebrow">Streaming</p>
+            <h3>Spotify</h3>
+            <p>Catalogue complet Silent Injury.</p>
+            <a class="cta" href="https://open.spotify.com/intl-fr/artist/3yQp4bKLIEdyO4jA6frSP8" target="_blank" rel="noopener">Open Spotify</a>
+          </article>
+
+          <article class="panel">
+            <p class="panel__eyebrow">Support direct</p>
+            <h3>Bandcamp</h3>
+            <p>L’album complet, en direct depuis la page du groupe.</p>
+            <a class="cta" href="https://silentinjury.bandcamp.com/album/silent-injury" target="_blank" rel="noopener">Open Bandcamp</a>
+          </article>
+
+          <article class="panel">
+            <p class="panel__eyebrow">Library</p>
+            <h3>Apple Music</h3>
+            <p>Écoute et ajout à la bibliothèque iOS.</p>
+            <a class="cta" href="https://music.apple.com/fr/album/silent-injury/1789094863" target="_blank" rel="noopener">Open Apple Music</a>
+          </article>
+
+          <article class="panel">
+            <p class="panel__eyebrow">Library</p>
+            <h3>Deezer</h3>
+            <p>Accès Deezer pour le public français.</p>
+            <a class="cta" href="https://www.deezer.com/fr/album/692870631" target="_blank" rel="noopener">Open Deezer</a>
+          </article>
         </div>
       </div>
-      <p style="margin-top:12px">Disponibilités / zone de déplacement : <span class="mono">[Normandie / Paris / Nord]</span></p>
-    </div>
-  </section>
+    </section>
 
-  <section id="press">
+    <section id="videos" class="section scroll-anchor">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Watch</p>
+          <h2 class="section-title">Videos</h2>
+          <p class="section-intro"></p>
+        </div>
 
+        <div class="video-layout">
+          <article class="video-card">
+            <iframe class="video-frame" src="https://www.youtube.com/embed/wf1ajH-h7EQ" title="Break The Mirror (Official Video)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-card__copy">
+              <p class="video-card__eyebrow">Official video</p>
+              <h3>Break The Mirror</h3>
+              <p></p>
+              <a class="cta cta--primary" href="https://www.youtube.com/watch?v=wf1ajH-h7EQ" target="_blank" rel="noopener">Watch on YouTube</a>
+            </div>
+          </article>
 
-    <div class="card">
-      <h2>Presse / radio</h2>
-      <div class="quote">
-        « C’est très influencé Machine Head, mais c’est du bon Machine Head. 
-        Avec un sens de la mélodie très présent ! »
-        <small>Metal Décadence (Ouest Track), jan. 2025</small>
+          <article class="video-card">
+            <video class="video-frame" controls preload="metadata" poster="assets/album-cover.jpg">
+              <source src="assets/PARALLEL720.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <div class="video-card__copy">
+              <p class="video-card__eyebrow">Embedded asset</p>
+              <h3>Parallel</h3>
+              <p></p>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="cta" style="margin-top:12px">
-        <a class="btn" href="assets/presskit.pdf" target="_blank" rel="noopener">📎 Press book</a>
-      </div>
-    </div>  </section>
+    </section>
 
+    <section class="section" aria-label="Galerie visuelle">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Gallery</p>
+          <h2 class="section-title">Live frames</h2>
+          <p class="section-intro"></p>
+        </div>
 
-  <section id="tech" class="grid">
-    <div class="card">
-      <h2>Tech snapshot</h2>
-      <ul class="list">
-        <li><b>Setup</b> : 100% DI (aucun ampli/baffle requis)</li>
-        <li><b>Guitares</b> : 2× Helix (sorties XLR)</li>
-        <li><b>Basse</b> : préamp Darkglass (DI XLR)</li>
-        <li><b>Voix</b> : 2 micros (lead + backs)</li>
-      </ul>
-      <p class="muted" style="margin-top:10px">Patch minimal (indicatif) : Kick / Snare / OH L-R + Bass DI + 2× GTR DI + 2 voix.</p>
-      <div class="cta" style="margin-top:12px">
-        <a class="btn" href="assets/techrider.pdf" target="_blank" rel="noopener">🎚️ Tech rider (PDF)</a>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img src="assets/gallery/18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp" alt="Silent Injury sur scène, guitares en noir et blanc" loading="lazy" />
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/gallery/09-silent-injury-live-scene-public-coulisses-noir-blanc.webp" alt="Silent Injury sur scène vu depuis la salle" loading="lazy" />
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/gallery/11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp" alt="Bassiste de Silent Injury sous lumière bleue" loading="lazy" />
+          </figure>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section id="about" class="section scroll-anchor">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Band</p>
+          <h2 class="section-title">About</h2>
+          <p class="section-intro"></p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>Silent Injury avance sur une ligne e haute tension qui crépite dangereusement : guitares serrées, voix qui tranche, mélodie sans concession.</p>
+            <p></p>
+
+            <div class="about-metrics" aria-label="Repères du groupe">
+              <div class="metric">
+                <strong>FR</strong>
+                <span>Base géographique du projet</span>
+              </div>
+              <div class="metric">
+                <strong>EPK</strong>
+                <span>Presskit et tech rider disponibles</span>
+              </div>
+              <div class="metric">
+                <strong>Live</strong>
+                <span>Nouveau set en préparation</span>
+              </div>
+              <div class="metric">
+                <strong>Video</strong>
+                <span>Break The Mirror en avant</span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="cta" href="downloads/silent-injury-photos-hd.zip" download>Download HD photos</a>
+              <a class="cta" href="assets/silentinjury.mp3" target="_blank" rel="noopener">Audio asset</a>
+            </div>
+          </div>
+
+          <figure class="about-photo">
+            <img src="assets/gallery/band-photo-credits.jpg" alt="Photo du groupe Silent Injury en répétition live" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section scroll-anchor">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Press / booking</p>
+          <h2 class="section-title">EPK / Contact</h2>
+          <p class="section-intro"></p>
+        </div>
 
     <div class="card" id="photos">
       <h2>Galerie</h2>
@@ -862,6 +1130,8 @@ img,svg,video{max-width:100%; height:auto}
           <li><a href="downloads/silent-injury-photos-hd.zip" download>📷 Photos HD (ZIP)</a></li>
         </ul>
       </div>
+    </section>
+  </main>
 
       <div class="cta" style="margin-top:12px">
         <a class="btn primary" href="mailto:silentinjuryofficiel@gmail.com?subject=Contacter%20Silent">✉️ Contacter</a>
@@ -870,6 +1140,7 @@ img,svg,video{max-width:100%; height:auto}
         <a class="btn" href="https://www.facebook.com/profile.php?id=61552999371364" target="_blank" rel="noopener"><svg class="icon-logo" aria-hidden="true"><use href="#icon-facebook"></use></svg><span>Facebook</span></a>
       </div>
     </div>
+  </footer>
 
     <div class="card">
       <h2>Checklist (pour prog)</h2>
@@ -956,20 +1227,27 @@ img,svg,video{max-width:100%; height:auto}
       setUI();
     });
 
-    function seekTo(clientX){
-      const rect = bar.getBoundingClientRect();
-      const x = Math.min(Math.max(0, clientX - rect.left), rect.width);
-      const pct = rect.width ? x / rect.width : 0;
-      if(isFinite(audio.duration)) audio.currentTime = pct * audio.duration;
-      setUI();
+    function openMenu() {
+      menuOverlay.classList.add('is-open');
+      menuOverlay.setAttribute('aria-hidden', 'false');
+      menuButton.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
     }
 
-    bar.addEventListener("click", (e) => seekTo(e.clientX));
+    function closeMenu() {
+      menuOverlay.classList.remove('is-open');
+      menuOverlay.setAttribute('aria-hidden', 'true');
+      menuButton.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
 
-    bar.addEventListener("keydown", (e) => {
-      if(!isFinite(audio.duration)) return;
-      if(e.key === "ArrowRight"){ audio.currentTime = Math.min(audio.duration, audio.currentTime + 5); setUI(); }
-      if(e.key === "ArrowLeft"){ audio.currentTime = Math.max(0, audio.currentTime - 5); setUI(); }
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuOverlay.classList.contains('is-open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     audio.addEventListener("timeupdate", setUI);
@@ -1015,127 +1293,18 @@ img,svg,video{max-width:100%; height:auto}
       : PHOTOS.filter(p => (p.tags || []).includes(filter));
   }
 
-  function render() {
-    if(!strip) return;
-    applyFilter();
-    strip.innerHTML = '';
-    const frag = document.createDocumentFragment();
-
-    currentList.forEach((p, idx) => {
-      const a = document.createElement('a');
-      a.className = 'ph';
-      const fullSrc = p.full || p.src;
-      const thumbSrc = p.thumb || fullSrc.replace('assets/gallery/','assets/gallery/thumbs/');
-      a.href = fullSrc;
-      a.dataset.index = String(idx);
-      a.dataset.full = fullSrc;
-
-      const img = document.createElement('img');
-      img.src = thumbSrc;
-      img.width = 320; img.height = 320;
-      img.alt = p.alt || 'Photo live — Silent Injury';
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      img.fetchPriority = 'low';
-
-      const cap = document.createElement('span');
-      cap.className = 'cap';
-      cap.textContent = p.caption || '';
-
-      a.appendChild(img);
-      if (cap.textContent) a.appendChild(cap);
-
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        openLightbox(idx);
-      });
-
-      frag.appendChild(a);
+    menuOverlay.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
     });
 
-    strip.appendChild(frag);
-  }
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menuOverlay.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
 
-  function openLightbox(idx) {
-    currentIndex = Math.max(0, Math.min(idx, currentList.length - 1));
-    const p = currentList[currentIndex];
-    const fullSrc = p.full || p.src;
-    lbImg.src = fullSrc;
-    lbImg.alt = p.alt || '';
-    lbCap.textContent = p.caption || '';
-    lightbox.classList.add('is-open');
-    lightbox.setAttribute('aria-hidden', 'false');
-    btnClose.focus();
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('is-open');
-    lightbox.setAttribute('aria-hidden', 'true');
-    lbImg.src = '';
-  }
-
-  function prev() {
-    if (!currentList.length) return;
-    openLightbox((currentIndex - 1 + currentList.length) % currentList.length);
-  }
-
-  function next() {
-    if (!currentList.length) return;
-    openLightbox((currentIndex + 1) % currentList.length);
-  }
-
-  // Toolbar
-  toolbar?.addEventListener('click', (e) => {
-    const btn = e.target.closest('button[data-filter]');
-    if (!btn) return;
-    filter = btn.dataset.filter;
-    toolbar.querySelectorAll('.chip').forEach(b => b.classList.toggle('is-active', b === btn));
-    render();
-  });
-
-
-  // Strip navigation (carousel-like)
-  function stepStrip(dir){
-    if(!strip) return;
-    const card = strip.querySelector('.ph');
-    const dx = (card ? card.getBoundingClientRect().width : 112) + 10;
-    strip.scrollBy({ left: dir * dx * 3, behavior: 'smooth' });
-  }
-  stripPrev?.addEventListener('click', () => stepStrip(-1));
-  stripNext?.addEventListener('click', () => stepStrip( 1));
-
-  // Wheel vertical -> horizontal (desktop comfort)
-  strip?.addEventListener('wheel', (e) => {
-    if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
-      e.preventDefault();
-      strip.scrollBy({ left: e.deltaY, behavior: 'auto' });
-    }
-  }, { passive:false });
-
-  // Keyboard arrows when strip is focused
-  strip?.addEventListener('keydown', (e) => {
-    if(e.key === 'ArrowRight') strip.scrollBy({ left: 320, behavior: 'smooth' });
-    if(e.key === 'ArrowLeft')  strip.scrollBy({ left: -320, behavior: 'smooth' });
-  });
-
-  // Lightbox controls
-  btnClose.addEventListener('click', closeLightbox);
-  btnPrev.addEventListener('click', prev);
-  btnNext.addEventListener('click', next);
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  window.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('is-open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') prev();
-    if (e.key === 'ArrowRight') next();
-  });
-
-  render();
-})();
-</script>
-
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    syncHeader();
+  </script>
 </body>
 </html>
