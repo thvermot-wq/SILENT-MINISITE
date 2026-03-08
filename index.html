@@ -676,7 +676,12 @@
       object-fit: cover;
       aspect-ratio: 4 / 3;
       filter: contrast(1.03) brightness(.94);
-      transition: transform .35s ease;
+      transition: transform .35s ease, opacity .25s ease;
+      opacity: 1;
+    }
+
+    .gallery-card img.is-swapping {
+      opacity: .2;
     }
 
     .gallery-card:hover img { transform: scale(1.03); }
@@ -1031,33 +1036,34 @@
         </div>
 
         <div class="gallery-grid">
-  <figure class="gallery-card">
-    <img
-      id="live-frame-1"
-      src="assets/gallery/04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp"
-      alt="Arthur Delorme sur scène"
-      loading="lazy"
-    />
-  </figure>
+          <figure class="gallery-card">
+            <img
+              id="live-frame-1"
+              src="assets/gallery/04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp"
+              alt="Arthur Delorme sur scène"
+              loading="lazy"
+            />
+          </figure>
 
-  <figure class="gallery-card">
-    <img
-      id="live-frame-2"
-      src="assets/gallery/03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp"
-      alt="Charles Rousseau sur scène"
-      loading="lazy"
-    />
-  </figure>
+          <figure class="gallery-card">
+            <img
+              id="live-frame-2"
+              src="assets/gallery/03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp"
+              alt="Charles Rousseau sur scène"
+              loading="lazy"
+            />
+          </figure>
 
-  <figure class="gallery-card">
-    <img
-      id="live-frame-3"
-      src="assets/gallery/01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp"
-      alt="Section rythmique de Silent Injury sur scène"
-      loading="lazy"
-    />
-  </figure>
-</div>
+          <figure class="gallery-card">
+            <img
+              id="live-frame-3"
+              src="assets/gallery/01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp"
+              alt="Section rythmique de Silent Injury sur scène"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="section scroll-anchor">
@@ -1193,6 +1199,71 @@
 
     window.addEventListener('scroll', syncHeader, { passive: true });
     syncHeader();
+
+    const liveFrames = [
+      {
+        el: document.getElementById('live-frame-1'),
+        images: [
+          'assets/gallery/04-silent-injury-live-arthur-delorme-chant-guitare-noir-blanc-portrait.webp',
+          'assets/gallery/07-silent-injury-live-arthur-delorme-chant-guitare-lumiere-rouge.webp',
+          'assets/gallery/10-silent-injury-live-arthur-delorme-chant-cri-profil-lumiere-bleue.webp',
+          'assets/gallery/12-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-ombre.webp',
+          'assets/gallery/13-silent-injury-live-arthur-delorme-guitariste-portrait-noir-blanc-yeux-clos.webp'
+        ],
+        index: 0
+      },
+      {
+        el: document.getElementById('live-frame-2'),
+        images: [
+          'assets/gallery/03-silent-injury-live-charles-rousseau-guitariste-soliste-chemise-carreaux.webp',
+          'assets/gallery/14-silent-injury-live-charles-rousseau-guitariste-soliste-lumiere-bleue.webp',
+          'assets/gallery/16-silent-injury-live-charles-rousseau-vincent-louvel-scene-noir-blanc.webp',
+          'assets/gallery/18-silent-injury-live-arthur-delorme-charles-rousseau-guitares-noir-blanc.webp',
+          'assets/gallery/silent-injury-charles-rousseau-guitariste-soliste-live-concert-noir-blanc-01.webp'
+        ],
+        index: 0
+      },
+      {
+        el: document.getElementById('live-frame-3'),
+        images: [
+          'assets/gallery/01-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-noir-blanc-scene.webp',
+          'assets/gallery/02-silent-injury-live-thibault-vermot-bassiste-portrait-noir-blanc.webp',
+          'assets/gallery/08-silent-injury-live-thibault-vermot-bassiste-vincent-louvel-batteur-plan-large-noir-blanc.webp',
+          'assets/gallery/11-silent-injury-live-thibault-vermot-bassiste-plongee-lumiere-bleue.webp',
+          'assets/gallery/17-silent-injury-live-thibault-vermot-arthur-delorme-vincent-louvel-noir-blanc.webp'
+        ],
+        index: 0
+      }
+    ];
+
+    function rotateLiveFrame(frame) {
+      if (!frame.el || !frame.images || frame.images.length < 2) return;
+
+      frame.el.classList.add('is-swapping');
+
+      setTimeout(() => {
+        frame.index = (frame.index + 1) % frame.images.length;
+        frame.el.src = frame.images[frame.index];
+        frame.el.classList.remove('is-swapping');
+      }, 180);
+    }
+
+    liveFrames.forEach((frame) => {
+      frame.images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    });
+
+    setInterval(() => rotateLiveFrame(liveFrames[0]), 3000);
+
+    setTimeout(() => {
+      setInterval(() => rotateLiveFrame(liveFrames[1]), 3000);
+    }, 1000);
+
+    setTimeout(() => {
+      setInterval(() => rotateLiveFrame(liveFrames[2]), 3000);
+    }, 2000);
   </script>
 </body>
 </html>
